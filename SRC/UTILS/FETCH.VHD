@@ -1,0 +1,56 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+USE work.CPU_package.all;
+
+ENTITY FETCH is
+    PORT(
+        INSTRUCTION : IN STD_LOGIC_VECTOR(INST_SIZE-1 downto 0);
+        RS, RT, RD  : OUT STD_LOGIC_VECTOR(REG_ADDR_SIZE-1 downto 0);
+        FUNC        : OUT STD_LOGIC_VECTOR(FUNC_SIZE-1 downto 0);
+        ADDRESS     : OUT STD_LOGIC_VECTOR(ADDR_SIZE-1 downto 0);
+        ADDRESS_EXT : OUT STD_LOGIC_VECTOR(ADDR_EXT_SIZE-1 downto 0);
+        INST_TYPE   : OUT STD_LOGIC_VECTOR(TYPE_BITS_SIZE-1 downto 0)
+    );
+END FETCH;
+
+architecture LOGICA OF FETCH is
+    TYPE INST_TYPE_T IS (
+        T_NOP,
+        T_R,
+        T_MEM,
+        T_COND,
+        T_J
+    );
+
+    TYPE OPCODE_TO_TYPE IS ARRAY(0 TO )
+    SIGNAL OP: STD_LOGIC_VECTOR (OP_BITS_SIZE-1 downto 0);
+    SIGNAL REG_POINTER : integer := 0;
+begin
+    
+    OP <= INSTRUCTION(INST_SIZE-1 downto INST_SIZE-OP_BITS_SIZE);
+
+    TYPE_R <= '1' WHEN OP = "011" ELSE '0'; --ADD/SUB
+    TYPE_MEM <= '1' WHEN OP = "001" OR OP = "010" ELSE '0'; --LW/SW
+    TYPE_COND <= '1' WHEN OP = "100" ELSE '0'; --BEQ
+    TYPE_J <= '1' WHEN OP = "101" ELSE '0'; --J
+
+    PROCESS(INSTRUCTION, OP)
+    BEGIN
+        REG_POINTER := INST_SIZE - OP_BITS_SIZE; --16 - 3 = 13
+        RS <= INSTRUCTION(REG_POINTER-1 downto REG_POINTER-REG_ADDR_SIZE); --13-1(12) DOWNTO 13-4(9) 
+
+        REG_POINTER := REG_POINTER - REG_ADDR_SIZE; --13 - 4 = 9
+        RT <= INSTRUCTION(REG_POINTER-1 downto REG_POINTER-REG_ADDR_SIZE); --9-1(8) DOWNTO 9-4(5)
+
+        REG_POINTER := REG_POINTER - REG_ADDR_SIZE; --9 - 4 = 5
+        RD <= INSTRUCTION(REG_POINTER-1 downto REG_POINTER-REG_ADDR_SIZE); --5-1(4) DOWNTO 5-4(1)
+
+        FUNC <= INSTRUCTION(FUNC_SIZE-1 downto 0); --//TODO: PRECISO VER SE (0 DOWNTO 0) É VALIDO, PARA SER GENERICO
+
+        ADDRESS <= INSTRUCTION(ADDR_SIZE-1 downto 0); --5 DOWNTO 0
+
+        ADDRESS_EXT <= INSTRUCTION(ADDR_EXT_SIZE-1 downto 0); --12 DOWNTO 0
+    END PROCESS;
+END LOGICA;
