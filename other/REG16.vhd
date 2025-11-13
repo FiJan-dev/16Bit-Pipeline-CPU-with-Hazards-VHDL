@@ -1,11 +1,11 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-use work.regbank_pkg.ALL;
+use work.CPU_package.ALL;
 
 ENTITY REG16 IS PORT(
 	rst, clock, enable: IN STD_LOGIC;				--Sinais de Controle
-	d: IN STD_LOGIC_VECTOR (N_BITS-1 DOWNTO 0);		--Data-In
-	q: OUT STD_LOGIC_VECTOR(N_BITS-1 DOWNTO 0));	--Register Data
+	d: IN DATA_T;	--Data-In
+	q: OUT DATA_T);	--Register Data
 END REG16;
 
 ARCHITECTURE LOGIC OF REG16 IS

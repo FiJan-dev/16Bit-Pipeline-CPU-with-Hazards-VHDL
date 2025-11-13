@@ -6,7 +6,7 @@ USE work.CPU_package.all;
 
 ENTITY REGBANK is
     PORT(
-        CLOCK, RESET, REGWRITE : std_logic;
+        CLOCK, RESET, REGWRITE : IN std_logic;
         RS, RT, RD : IN REG_ADDR_T;
         WRITEDATA : IN DATA_T;
         RSDATA, RTDATA: OUT DATA_T
@@ -14,8 +14,16 @@ ENTITY REGBANK is
 END REGBANK;
 
 ARCHITECTURE LOGICA OF REGBANK is
+
+    component REG16
+        port (
+            rst, clock, enable: IN STD_LOGIC;
+            d: IN DATA_T;		
+	        q: OUT DATA_T);
+    end component;
+
     TYPE REG_ARRAY IS ARRAY(0 TO 15) OF DATA_T;
-    SIGNAL REGS: REG_ARRAY := (OTHERS => (OTHERS => '0'));
+    SIGNAL REGS_OUT: REG_ARRAY := (OTHERS => (OTHERS => '0'));
     SIGNAL WRITE_ENABLE: DATA_T;
 begin
 
@@ -46,64 +54,61 @@ begin
         END IF;
     END PROCESS;
 
-    -- Registradores
-    PROCESS(CLOCK, RESET)
-    begin
-        IF RESET = '1' THEN
-            REGS <= (OTHERS => (OTHERS => '0'));
-        ELSIF RISING_EDGE(CLOCK) THEN
-            for i in 0 to 15 loop
-                IF WRITE_ENABLE(i) = '1' THEN
-                    REGS(i) <= WRITEDATA;
-                END IF;
-            END LOOP;
-        END IF;
-    END PROCESS;
+    GEN_REGS: FOR i IN 0 TO 15 GENERATE
+        REG_i: REG16
+            PORT MAP (
+                rst     => RESET,
+                clock   => CLOCK,
+                enable  => WRITE_ENABLE(i),
+                d       => WRITEDATA,
+                q       => REGS_OUT(i)
+            );
+    END GENERATE;
 
     -- Mux de leitura RS
-    PROCESS(RS,REGS)
+    PROCESS(RS, REGS_OUT)
     begin
         CASE RS is
-            WHEN "0000" => RSDATA <= REGS(0);
-            WHEN "0001" => RSDATA <= REGS(1);
-            WHEN "0010" => RSDATA <= REGS(2);
-            WHEN "0011" => RSDATA <= REGS(3);
-            WHEN "0100" => RSDATA <= REGS(4);
-            WHEN "0101" => RSDATA <= REGS(5);
-            WHEN "0110" => RSDATA <= REGS(6);
-            WHEN "0111" => RSDATA <= REGS(7);
-            WHEN "1000" => RSDATA <= REGS(8);
-            WHEN "1001" => RSDATA <= REGS(9);
-            WHEN "1010" => RSDATA <= REGS(10);
-            WHEN "1011" => RSDATA <= REGS(11);
-            WHEN "1100" => RSDATA <= REGS(12);
-            WHEN "1101" => RSDATA <= REGS(13);
-            WHEN "1110" => RSDATA <= REGS(14);
-            WHEN "1111" => RSDATA <= REGS(15);
+            WHEN "0000" => RSDATA <= REGS_OUT(0);
+            WHEN "0001" => RSDATA <= REGS_OUT(1);
+            WHEN "0010" => RSDATA <= REGS_OUT(2);
+            WHEN "0011" => RSDATA <= REGS_OUT(3);
+            WHEN "0100" => RSDATA <= REGS_OUT(4);
+            WHEN "0101" => RSDATA <= REGS_OUT(5);
+            WHEN "0110" => RSDATA <= REGS_OUT(6);
+            WHEN "0111" => RSDATA <= REGS_OUT(7);
+            WHEN "1000" => RSDATA <= REGS_OUT(8);
+            WHEN "1001" => RSDATA <= REGS_OUT(9);
+            WHEN "1010" => RSDATA <= REGS_OUT(10);
+            WHEN "1011" => RSDATA <= REGS_OUT(11);
+            WHEN "1100" => RSDATA <= REGS_OUT(12);
+            WHEN "1101" => RSDATA <= REGS_OUT(13);
+            WHEN "1110" => RSDATA <= REGS_OUT(14);
+            WHEN "1111" => RSDATA <= REGS_OUT(15);
             WHEN OTHERS => RSDATA <= (OTHERS => '0');
         END CASE;
     END PROCESS;
 
     --Mux de leitura RT
-    PROCESS(RT,REGS)
+    PROCESS(RT, REGS_OUT)
     begin
         CASE RT is
-            WHEN "0000" => RTDATA <= REGS(0);
-            WHEN "0001" => RTDATA <= REGS(1);
-            WHEN "0010" => RTDATA <= REGS(2);
-            WHEN "0011" => RTDATA <= REGS(3);   
-            WHEN "0100" => RTDATA <= REGS(4);
-            WHEN "0101" => RTDATA <= REGS(5);
-            WHEN "0110" => RTDATA <= REGS(6);
-            WHEN "0111" => RTDATA <= REGS(7);
-            WHEN "1000" => RTDATA <= REGS(8);
-            WHEN "1001" => RTDATA <= REGS(9);
-            WHEN "1010" => RTDATA <= REGS(10);
-            WHEN "1011" => RTDATA <= REGS(11);
-            WHEN "1100" => RTDATA <= REGS(12);
-            WHEN "1101" => RTDATA <= REGS(13);
-            WHEN "1110" => RTDATA <= REGS(14);
-            WHEN "1111" => RTDATA <= REGS(15);
+            WHEN "0000" => RTDATA <= REGS_OUT(0);
+            WHEN "0001" => RTDATA <= REGS_OUT(1);
+            WHEN "0010" => RTDATA <= REGS_OUT(2);
+            WHEN "0011" => RTDATA <= REGS_OUT(3);   
+            WHEN "0100" => RTDATA <= REGS_OUT(4);
+            WHEN "0101" => RTDATA <= REGS_OUT(5);
+            WHEN "0110" => RTDATA <= REGS_OUT(6);
+            WHEN "0111" => RTDATA <= REGS_OUT(7);
+            WHEN "1000" => RTDATA <= REGS_OUT(8);
+            WHEN "1001" => RTDATA <= REGS_OUT(9);
+            WHEN "1010" => RTDATA <= REGS_OUT(10);
+            WHEN "1011" => RTDATA <= REGS_OUT(11);
+            WHEN "1100" => RTDATA <= REGS_OUT(12);
+            WHEN "1101" => RTDATA <= REGS_OUT(13);
+            WHEN "1110" => RTDATA <= REGS_OUT(14);
+            WHEN "1111" => RTDATA <= REGS_OUT(15);
             WHEN OTHERS => RTDATA <= (OTHERS => '0');
         END CASE;
     END PROCESS;
