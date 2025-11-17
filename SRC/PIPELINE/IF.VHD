@@ -1,0 +1,49 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+USE std.textio.ALL;
+USE IEEE.std_logic_textio.ALL;
+
+ENTITY IF_STAGE is
+    GENERIC (
+        INST_SIZE : INTEGER := 16;
+        ADDR_SIZE : INTEGER := 8
+    );
+    PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        PC_SRC: IN STD_LOGIC;
+        INSTRUCTION_OUT : OUT STD_LOGIC_VECTOR(INST_SIZE-1 downto 0);
+        INST_TYPE   : OUT STD_LOGIC_VECTOR(TYPE_BITS_SIZE-1 downto 0);
+        PC_OUT :OUT UNSIGNED(ADDR_SIZE-1 DOWNTO 0)
+    );
+END IF_STAGE;
+
+architecture COMPORTAMENTO OF IF_STAGE is
+    SIGNAL PC : UNSIGNED(ADDR_SIZE-1 DOWNTO 0) := (OTHERS => '0');
+    SIGNAL PCNEXT : UNSIGNED(ADDR_SIZE-1 DOWNTO 0);
+    SIGNAL DATA_STREAM : STD_LOGIC_VECTOR(INST_SIZE-1 DOWNTO 0);
+BEGIN
+    U_READER: ENTITY WORK.READER
+        GENERIC MAP(INST_SIZE => INST_SIZE, ADDR_SIZE => ADR_SIZE)
+        PORT MAP(
+            CLOCK => CLOCK,
+            RESET => RESET,
+            PC => PC,
+            DATA_OUT => DATA_STREAM
+        );
+
+    NEXT_PC <= PC + 1 WHEN PC_SRC = '0' ELSE PC+1; --NAO FACO NADA AINDA
+
+    PROCESS(CLOCK, RESET)
+    begin
+        IF RESET = '1' THEN
+            PC <= (OTHERS => '0');
+        ELSIF RISING_EDGE(CLOCK) THEN
+            PC <= NEXT_PC;
+        END IF;
+    END PROCESS;
+
+    PC_OUT <= PC;
+
+END COMPORTAMENTO;
