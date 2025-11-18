@@ -7,7 +7,7 @@ USE IEEE.std_logic_textio.ALL;
 ENTITY IF_STAGE is
     GENERIC (
         INST_SIZE : INTEGER := 16;
-        ADDR_SIZE : INTEGER := 8
+        ADDR_SIZE : INTEGER := 16
     );
     PORT (
         CLOCK : IN STD_LOGIC;
@@ -45,5 +45,7 @@ BEGIN
     END PROCESS;
 
     PC_OUT <= PC;
+
+    --CONCATENAR EM UM
 
 END COMPORTAMENTO;
