@@ -4,15 +4,15 @@ use ieee.numeric_std.all;
 
 USE work.CPU_package.all;
 
-ENTITY PIPELINE_REGISTER is
+ENTITY IDEX is
     PORT (
         D : IN STD_LOGIC_VECTOR(87 downto 0);
         CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
         Q : OUT STD_LOGIC_VECTOR(87 downto 0);
     );
-END PIPELINE_REGISTER;
+END IDEX;
 
-ARCHITECTURE LOGICA OF PIPELINE_REGISTER is
+ARCHITECTURE LOGICA OF IDEX is
 begin
     PROCESS (CLOCK)
     begin
