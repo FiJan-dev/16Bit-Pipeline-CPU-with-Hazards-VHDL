@@ -1,23 +1,24 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
-USE std.textio.ALL;
-USE IEEE.std_logic_textio.ALL;
+USE WORK.CPU_package.ALL;
 
 ENTITY ID_STAGE is
     GENERIC (
-        INST_SIZE : INTEGER := 16;
         ADDR_SIZE : INTEGER := 8
     );
     PORT (
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
-        INSTRUCTION : IN STD_LOGIC_VECTOR(INST_SIZE-1 downto 0);
+        INSTRUCTION : IN INST_T;
+
         INST_TYPE   : IN STD_LOGIC_VECTOR(TYPE_BITS_SIZE-1 downto 0);
         PC : IN UNSIGNED(ADDR_SIZE-1 DOWNTO 0);
-        RS_OUT: OUT STD_LOGIC_VECTOR(INST_SIZE-1 DOWNTO 0);
-        RT_OUT: OUT STD_LOGIC_VECTOR(INST_SIZE-1 DOWNTO 0);
+
+        RS_OUT: OUT DATA_OUT;
+        RT_OUT: OUT DATA_OUT;
         SIGN_EXT_OUT : OUT DATA_T
+        DATA_OUT: OUT STD_LOGIC_VECTOR(87 DOWNTO 0);
     );
 END ID_STAGE;
 
@@ -25,36 +26,44 @@ ARCHITECTURE COMPORTAMENTO OF ID_STAGE is
     SIGNAL RS : STD_LOGIC_VECTOR(3 DOWNTO 0);
     SIGNAL RT : STD_LOGIC_VECTOR(3 DOWNTO 0);
     SIGNAL RD : STD_LOGIC_VECTOR(3 DOWNTO 0);
-    SIGNAL SIGN_EXT : STD_LOGIC_VECTOR(4 DOWNTO 0);
-begin
-    REGBANK: ENTITY WORK.REGBANK
-        PORT MAP(
-            CLOCK => CLOCK,
-            RESET => RESET,
-            --COLOCAR REGWRITE
-            RS => RS,
-            RT => RT,
-            RD => RD,
-            --WRITEDATA DO WB
-            RSDATA => RS_OUT,
-            RTDATA => RT_OUT
-        );
-
-    SHIFLEFT2: ENTITY WORK.SLLTWO
+    SIGNAL IMM5 : STD_LOGIC_VECTOR(4 DOWNTO 0);
+    SIGNAL IMM_X4 : DATA_T;
+begin    
+    REGBANK_INST: ENTITY WORK.REGBANK
     PORT MAP(
-        );
-    SIGNEXT: ENTITY WORK.SIGN_EXT
+        CLOCK => CLOCK,
+        RESET => RESET,
+        REGWRITE => '0',
+        RS => RS,
+        RT => RT,
+        RD => RD,
+        WRITEDATA => (OTHERS=>'0'),
+        RSDATA => RS_OUT,
+        RTDATA => RT_OUT
+    );
+    
+    SIGN_EXT_INST: ENTITY WORK.SIGN_EXT
         PORT MAP(
-            IMMEDIATE => SIGN_EXT
+            IMMEDIATE => IMM5,
             IMMEDIATE_EXT => SIGN_EXT_OUT
         );
+    
+    UC: CONTROL_UNIT PORT MAP(
+        CLOCK => CLOCK,
+        RESET => RESET,
+        INSTRUCTION_TYPE => INST_TYPE,
+        COMPARE => '0',
+        FUNC => 
+    )
     PROCESS(CLOCK, RESET)
     begin
         --HAZARD DETEC RECEBE INSTRUCTION
         --CONTROL UNIT RECEBE INSTRUCTION
         RS <= INSTRUCTION(12 DOWNTO 9);
         RT <= INSTRUCTION(8 DOWNTO 5);
-        SIGN_EXT <= INSTRUCTION(4 DOWNTO 0);
         RD <= INSTRUCTION(4 DOWNTO 1);
+        IMM5 <= INSTRUCTION(4 DOWNTO 0);
     END PROCESS;
+    
+    
 END COMPORTAMENTO;
