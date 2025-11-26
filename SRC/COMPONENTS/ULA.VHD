@@ -12,15 +12,7 @@ PORT (
 	Cout, Overflow : OUT STD_LOGIC);
 END ULA;
 
-ARCHITECTURE logica OF ULA IS
-
-	COMPONENT ADDER IS --componente para fazer a soma/sub
-	PORT (
-	Cin : IN STD_LOGIC;
-	BitB , BitA : IN STD_LOGIC;
-	S, Cout : OUT STD_LOGIC);
-	END COMPONENT;
-	
+ARCHITECTURE logica OF ULA IS	
 	SIGNAL Carry : STD_LOGIC_VECTOR(0 TO DATA_SIZE-1); --carry que é carregado de uma soma para outra
 	SIGNAL NOT_A : STD_LOGIC_VECTOR(DATA_SIZE-1 DOWNTO 0); -- variavel para caso seja uma sub poder tratar ela como uma soma com um numero negativo
 	SIGNAL INTERNAL_COUT : STD_LOGIC;
@@ -38,7 +30,7 @@ BEGIN
 	            S    => S(i),
                 Cout => Carry(i+1)
             );
-        end generate;	
+    end generate;	
 	
 	Cout <= Carry(DATA_SIZE);
 	Overflow <= Carry(DATA_SIZE-1) XOR Carry(DATA_SIZE);

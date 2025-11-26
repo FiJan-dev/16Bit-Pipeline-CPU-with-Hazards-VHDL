@@ -32,5 +32,141 @@ PACKAGE CPU_package is
         MEMTOREG : std_logic;
     END RECORD;
 
+    -- Banco de registradores
+    COMPONENT REGBANK
+        PORT(
+            CLOCK, RESET, REGWRITE : std_logic;
+            RS, RT, RD : IN REG_ADDR_T;
+            WRITEDATA : IN DATA_T;
+            RSDATA, RTDATA: OUT DATA_T
+        );
+    END COMPONENT;
+    
+    -- ULA
+    COMPONENT ULA
+        PORT (
+            Cin : IN STD_LOGIC; 
+            B: IN STD_LOGIC_VECTOR(DATA_SIZE-1 DOWNTO 0); 
+            A: IN STD_LOGIC_VECTOR(DATA_SIZE-1 DOWNTO 0);
+            S : OUT STD_LOGIC_VECTOR(DATA_SIZE-1 DOWNTO 0);
+            Cout, Overflow : OUT STD_LOGIC
+        );
+    END COMPONENT;
+
+    -- ADDER
+    COMPONENT ADDER
+        PORT (
+            Cin : IN STD_LOGIC;
+            BitB , BitA  : IN STD_LOGIC;
+            S, Cout : OUT STD_LOGIC
+        );
+    END COMPONENT;
+
+    -- MEMORIA DE DADO
+    COMPONENT MEMORY_DATA
+        PORT (
+            CLOCK : IN  STD_LOGIC;
+            RESET     : IN  STD_LOGIC;
+            MEM_WRITE : IN  STD_LOGIC;
+            MEM_READ  : IN  STD_LOGIC;
+            ADDRESS   : IN  DATA_T;
+            WRITE_DATA: IN  DATA_T;
+            READ_DATA : OUT DATA_T;
+        );
+    END COMPONENT;
+
+    COMPONENT SIGN_EXT
+        PORT(
+            IMMEDIATE : IN STD_LOGIC_VECTOR(ADDR_SIZE-1 downto 0);
+            IMMEDIATE_EXT : OUT DATA_T
+        );
+    END COMPONENT;
+
+    COMPONENT DISPLAY
+	PORT(   SW : IN STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Configuração do Display para a vizualização dos números e letras
+            HEX :OUT STD_LOGIC_VECTOR  (0 TO 6));
+    END COMPONENT;
+
+    COMPONENT CONTROL_UNIT
+        PORT(
+            CLOCK : IN STD_LOGIC;
+            RESET : IN STD_LOGIC;
+            INSTRUCTION_TYPE : IN --VETOR
+            COMPARE : IN STD_LOGIC;
+            FUNC : IN STD_LOGIC;
+            --ID
+            PC_SRC : OUT STD_LOGIC;
+            --EX
+            ALUSRC : OUT STD_LOGIC;
+            REGDST : OUT STD_LOGIC;
+            --MEM
+            MEMWRITE : OUT STD_LOGIC;
+            MEMREAD : OUT STD_LOGIC;
+            --WB
+            MEM2REG : OUT STD_LOGIC;
+            REGWRITE : OUT STD_LOGIC
+            --ADICONAR CONTROLE DA ULA PRA OP
+        );
+    END COMPONENT;
+
+    -- Unidade de adiantamento
+    COMPONENT FORWARDING_UNIT
+        PORT (
+            CLOCK : IN STD_LOGIC;
+            RESET : IN STD_LOGIC;
+            
+            RS : IN 
+            RT : IN 
+            
+            REGWRITE_MEM : IN;
+            RDST_MEM : IN 
+            
+            REGWRITE_WB : IN
+            REGDST_WB : IN 
+
+            FOWARD_A : OUT 
+            FOWARD_B : OUT 
+        );
+    END COMPONENT;
+
+    COMPONENT PIPELINE_REGISTER
+        PORT (
+            D : IN DATA_SIZE;
+            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
+            Q : OUT DATA_SIZE
+        );
+    END COMPONENT;
+
+    COMPONENT IFID
+        PORT (
+            D : IN STD_LOGIC_VECTOR(31 downto 0);
+            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
+            Q : OUT STD_LOGIC_VECTOR(31 downto 0);
+        );  
+    END COMPONENT;
+
+    COMPONENT IDEX
+        PORT (
+            D : IN STD_LOGIC_VECTOR(87 downto 0);
+            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
+            Q : OUT STD_LOGIC_VECTOR(87 downto 0);
+        );
+    END COMPONENT;
+
+    COMPONENT EXMEM
+        PORT (
+            D : IN STD_LOGIC_VECTOR(35 downto 0);
+            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
+            Q : OUT STD_LOGIC_VECTOR(35 downto 0);
+        );
+    END COMPONENT;
+
+    COMPONENT MEMWB
+        PORT (
+            D : IN STD_LOGIC_VECTOR(35 downto 0);
+            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
+            Q : OUT STD_LOGIC_VECTOR(35 downto 0);
+        );
+    END COMPONENT;
 END CPU_package;
 
