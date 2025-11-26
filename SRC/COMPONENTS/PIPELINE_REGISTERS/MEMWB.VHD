@@ -8,8 +8,8 @@ ENTITY MEMWB is
     PORT (
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
-        DATA_IN : IN STD_LOGIC_VECTOR(37 downto 0);
-        DATA_OUT : OUT STD_LOGIC_VECTOR(37 downto 0);
+        DATA_IN : IN DATA_REG_MEM_WB;
+        DATA_OUT : OUT DATA_REG_MEM_WB
     );
 END MEMWB;
 

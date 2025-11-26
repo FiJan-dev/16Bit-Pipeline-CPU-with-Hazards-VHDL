@@ -9,8 +9,8 @@ ENTITY EXMEM is
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
         FLUSH: IN STD_LOGIC;
-        DATA_IN : IN STD_LOGIC_VECTOR(39 downto 0);
-        DATA_OUT : OUT STD_LOGIC_VECTOR(39 downto 0);
+        DATA_IN : IN DATA_REG_EX_MEM;
+        DATA_OUT : OUT DATA_REG_EX_MEM
     );
 END EXMEM;
 
