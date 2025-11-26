@@ -9,8 +9,8 @@ ENTITY IDEX is
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
         FLUSH: IN STD_LOGIC;
-        DATA_IN : IN STD_LOGIC_VECTOR(65 downto 0);
-        DATA_OUT : OUT STD_LOGIC_VECTOR(65 downto 0);
+        DATA_IN : IN DATA_REG_ID_EX;
+        DATA_OUT : OUT DATA_REG_ID_EX
     );
 END IDEX;
 
