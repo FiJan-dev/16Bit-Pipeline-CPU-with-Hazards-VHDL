@@ -13,7 +13,7 @@ PACKAGE CPU_package is
     constant FUNC_SIZE      : integer := 1;
     constant TYPE_BITS_SIZE : integer := 2;
 
-    SUBTYPE DATA_T is std_logic_vecto(DATA_SIZE - 1 downto 0);
+    SUBTYPE DATA_T is std_logic_vector(DATA_SIZE - 1 downto 0);
     SUBTYPE INST_T is std_logic_vector(INST_SIZE-1 downto 0);
     SUBTYPE REG_ADDR_T is std_logic_vector(REG_ADDR_SIZE-1 downto 0);
 
@@ -80,6 +80,11 @@ PACKAGE CPU_package is
             IMMEDIATE : IN STD_LOGIC_VECTOR(ADDR_SIZE-1 downto 0);
             IMMEDIATE_EXT : OUT DATA_T
         );
+    END COMPONENT;
+
+    COMPONENT DISPLAY
+	PORT(   SW : IN STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Configuração do Display para a vizualização dos números e letras
+            HEX :OUT STD_LOGIC_VECTOR  (0 TO 6));
     END COMPONENT;
 
     COMPONENT CONTROL_UNIT

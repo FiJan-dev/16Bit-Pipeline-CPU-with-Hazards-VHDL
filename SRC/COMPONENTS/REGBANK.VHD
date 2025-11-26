@@ -6,7 +6,9 @@ USE work.CPU_package.all;
 
 ENTITY REGBANK is
     PORT(
-        CLOCK, RESET, REGWRITE : std_logic;
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        REGWRITE : std_logic;
         RS, RT, RD : IN REG_ADDR_T;
         WRITEDATA : IN DATA_T;
         RSDATA, RTDATA: OUT DATA_T
