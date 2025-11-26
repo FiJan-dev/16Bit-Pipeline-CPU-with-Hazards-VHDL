@@ -8,8 +8,8 @@ ENTITY IFID is
     PORT (
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
-        DATA_IN : IN STD_LOGIC_VECTOR(34 downto 0);
-        DATA_OUT : OUT STD_LOGIC_VECTOR(34 downto 0);
+        DATA_IN : IN DATA_REG_IF_ID;
+        DATA_OUT : OUT DATA_REG_IF_ID;
     );
 END IFID;
 
