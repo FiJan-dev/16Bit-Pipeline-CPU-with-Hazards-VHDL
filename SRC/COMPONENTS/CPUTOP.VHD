@@ -1,0 +1,23 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY CPUTOP is
+    PORT(
+        CLOCK_50 : IN STD_LOGIC;
+        SW : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    );
+END CPUTOP;
+
+ARCHITECTURE LOGICA OF CPUTOP is
+begin
+    MAIN_CPU : CPU PORT MAP(CLOCK, RESET);
+    DISPLAY_HEX7 : display PORT MAP(,);
+    DISPLAY_HEX6 : display PORT MAP(,);
+    DISPLAY_HEX5 : display PORT MAP(,);
+    DISPLAY_HEX4 : display PORT MAP(,);
+    DISPLAY_HEX3 : display PORT MAP(,); --TALVEZ PRECISA ESTAR NA CPU.VHD
+    DISPLAY_HEX2 : display PORT MAP(,);
+    DISPLAY_HEX1 : display PORT MAP(,);
+    DISPLAY_HEX0 : display PORT MAP(,);
+END LOGICA;
