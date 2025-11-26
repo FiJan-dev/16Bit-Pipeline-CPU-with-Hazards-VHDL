@@ -7,7 +7,7 @@ USE work.CPU_package.all;
 ENTITY SIGN_EXT is
     PORT(
         IMMEDIATE : IN STD_LOGIC_VECTOR(ADDR_SIZE-1 downto 0);
-        IMMEDIATE_EXT : OUT DATA_T;
+        IMMEDIATE_EXT : OUT DATA_T
     );
 END SIGN_EXT;
 
