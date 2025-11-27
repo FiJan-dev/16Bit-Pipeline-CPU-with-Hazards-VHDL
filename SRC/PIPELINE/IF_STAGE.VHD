@@ -36,8 +36,6 @@ BEGIN
             PC <= NEXT_PC;
         END IF;
     END PROCESS;
-    --TODO CONFERIR SE SAI TIPO (2 DOWNTO 0)
-    --DATA_IF_ID <= PC;
 
     -- 16 - 16
     -- PC+4 - INST
