@@ -1,0 +1,51 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY FOWARDING_UNITY is
+    PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        --EX
+        RS : IN --VETOR; --PASSAR RS (3 DOWNTO 0) PARA REGS ID/EX
+        RT : IN --VETOR;
+        --MEM
+        REGWRITE_MEM : IN;
+        RDST_MEM : IN --VETOR;
+        --WB
+        REGWRITE_WB : IN
+        REGDST_WB : IN --VETOR;
+
+        FOWARD_A : OUT --VETOR;
+        FOWARD_B : OUT --VETOR
+    );
+END FOWARDING_UNITY;
+
+ARCHITECTURE COMPORTAMENTO OF FOWARDING_UNITY IS
+BEGIN
+    PROCESS(BEGIN, RESET)
+    BEGIN
+        IF  (REGWRITE_MEM = 1 AND RDST_MEM != 0) AND (RDST_MEM == RS)
+            FOWARD_A <= '10';
+        ELSIF
+            FOWARD_A <= '00';
+        END IF;
+
+        IF  (REGWRITE_MEM = 1 AND RDST_MEM != 0) AND (RDST_MEM == RT)
+            FOWARD_B <= '10';
+        ELSIF
+            FOWARD_B <= '00';
+        END IF;
+
+        IF (REGWRITE_WB = 1 AND REGDST_WB != 0) AND (REGDST_WB == RS) AND NOT (REGWRITE_MEM = 1 AND RDST_MEM != 0) AND (RDST_MEM == RS)
+            FOWARD_A <= '01';
+        ELSIF
+            FOWARD_A <= '00';
+        END IF;
+
+        IF (REGWRITE_WB = 1 AND REGDST_WB != 0) AND (REGDST_WB == RT) AND NOT (REGWRITE_MEM = 1 AND RDST_MEM != 0) AND (RDST_MEM == RT)
+            FOWARD_B <= '01';
+        ELSIF
+            FOWARD_B <= '00';
+        END IF;
+END COMPORTAMENTO;

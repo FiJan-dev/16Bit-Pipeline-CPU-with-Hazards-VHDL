@@ -21,7 +21,7 @@ begin
         IF RESET = '1' THEN
             DATA_OUT <= (others => '0'); 
         ELSIF FLUSH = '1' THEN
-            DATA_OUT <= (others => '0');   --TODO://ZERAR APENAS 6 SINAIS ALTOS
+            DATA_OUT(66 DOWNTO 61) <= (others => '0');
         ELSIF RISING_EDGE(CLOCK) THEN
             DATA_OUT <= DATA_IN;
         END IF;

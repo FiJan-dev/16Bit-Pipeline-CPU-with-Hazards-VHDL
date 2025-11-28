@@ -5,7 +5,7 @@ use std.textio.all;
 use IEEE.std_logic_textio.all;
 
 ENTITY ASSEMBLER is
-    GENERIC (INST_SIZE : INTEGER := 16);
+    GENERIC (INST_SIZE : INTEGER := 16)
     PORT (
         SW : IN STD_LOGIC_VECTOR (INST_SIZE+1 DOWNTO 0);
         LEDR: OUT STD_LOGIC_VECTOR(INST_SIZE+1 DOWNTO 0)

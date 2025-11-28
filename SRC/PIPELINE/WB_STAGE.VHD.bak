@@ -1,7 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
-USE WORK.CPU_package.ALL;
 
 ENTITY WB_STAGE IS
     PORT(

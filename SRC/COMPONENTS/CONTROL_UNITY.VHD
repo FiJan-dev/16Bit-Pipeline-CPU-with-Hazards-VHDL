@@ -10,10 +10,11 @@ ENTITY CONTROL_UNITY is
         COMPARE : IN STD_LOGIC;
         FUNC : IN STD_LOGIC;
         --ID
-        PC_SRC : OUT STD_LOGIC;
+        PC_SRC : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
         --EX
         ALUSRC : OUT STD_LOGIC;
         REGDST : OUT STD_LOGIC;
+        FUNC_OUT: OUT STD_LOGIC;
         --MEM
         MEMWRITE : OUT STD_LOGIC;
         MEMREAD : OUT STD_LOGIC;
@@ -25,44 +26,57 @@ ENTITY CONTROL_UNITY is
 END CONTROL_UNITY;
 
 ARCHITECTURE LOGICA OF CONTROL_UNITY is
+	SIGNAL BRANCH: STD_LOGIC;
 begin
     process(OPCODE, COMPARE)
-    case OPCODE is
-        WHEN "011" => --R
-            ALUSRC <= '0'; -- RT
-            REGDST <= '1'; -- RD
-            MEMWRITE <= '0';
-            MEMREAD <= '0';
-            MEM2REG <= '1'; -- ULAOUT
-            REGWRITE <= '1';
-        WHEN "100" => --COND AND COMP = 1
-            IF COMPARE='1' THEN
-                MEMWRITE <= '0';
-                MEMREAD <= '0';
-                REGWRITE <= '0';
-            END IF;
-        WHEN "001" => --MEM AND LOAD
-            ALUSRC <= '1'; -- IMMEDIATE
-            REGDST <= '0'; -- RT
-            MEMWRITE <= '0';
-            MEMREAD <= '1';
-            MEM2REG <= '0'; -- MEM
-            REGWRITE <= '1';
-        WHEN "010" => --MEM AND WRITE
-            ALUSRC <= '1'; -- IMMEDIATE
-            REGDST <= '0'; -- RT
-            MEMWRITE <= '1';
-            MEMREAD <= '0';
-            MEM2REG <= '0'; -- MEM
-            REGWRITE <= '1';
-        WHEN "101" => --J
-            PC_SRC <= '2' --ADDRESS
-            MEMWRITE <= '0';
-            MEMREAD <= '0';
-            REGWRITE <= '0';
-        WHEN OTHERS =>
-            MEMWRITE <= '0';
-            MEMREAD <= '0';
-            REGWRITE <= '0';
-    END CASE;
+	 BEGIN
+		 case OPCODE is
+			  WHEN "011" => --R
+					ALUSRC <= '0'; -- RT
+					REGDST <= '1'; -- RD
+					MEMWRITE <= '0';
+					MEMREAD <= '0';
+					MEM2REG <= '1'; -- ULAOUT
+					REGWRITE <= '1';
+					FUNC_OUT <= FUNC;
+					PC_SRC <= "00";
+			  WHEN "100" => --COND AND COMP = 1
+					BRANCH <= '1';
+					MEMWRITE <= '0';
+					MEMREAD <= '0';
+					REGWRITE <= '0';
+					IF (BRANCH = '1' AND COMPARE = '1') THEN
+						 PC_SRC <= "01";
+					else
+						 PC_SRC <= "00";
+					END IF;
+			  WHEN "001" => --MEM AND LOAD
+					ALUSRC <= '1'; -- IMMEDIATE
+					REGDST <= '0'; -- RT
+					MEMWRITE <= '0';
+					MEMREAD <= '1';
+					MEM2REG <= '0'; -- MEM
+					REGWRITE <= '1';
+					PC_SRC <= "00";
+			  WHEN "010" => --MEM AND WRITE
+					ALUSRC <= '1'; -- IMMEDIATE
+					REGDST <= '0'; -- RT
+					MEMWRITE <= '1';
+					MEMREAD <= '0';
+					MEM2REG <= '0'; -- MEM
+					REGWRITE <= '1';
+					PC_SRC <= "00";
+			  WHEN "101" => --J
+					PC_SRC <= "10"; --ADDRESS
+					MEMWRITE <= '0';
+					MEMREAD <= '0';
+					REGWRITE <= '0';
+			  WHEN OTHERS =>
+					PC_SRC <= "00";
+					MEMWRITE <= '0';
+					MEMREAD <= '0';
+					REGWRITE <= '0';
+		 END CASE;
+    END PROCESS;
+
 END LOGICA;

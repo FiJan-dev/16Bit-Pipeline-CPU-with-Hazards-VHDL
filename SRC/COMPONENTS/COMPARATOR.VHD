@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+USE WORK.CPU_package.all;
+
+entity comparator is
+    port (
+        A       : in  DATA_T;
+        B       : in  DATA_T;
+
+        EQ  : out std_logic
+    );
+end entity comparator;
+
+
+architecture LOGIC of comparator is
+begin
+
+    process(A, B)
+        variable A_u : unsigned(DATA_SIZE-1 downto 0);
+        variable B_u : unsigned(DATA_SIZE-1 downto 0);
+    begin
+        -- conversão de SLV para unsigned
+        A_u := unsigned(A);
+        B_u := unsigned(B);
+
+        -- comparação
+        if (A_u = B_u) then
+            EQ <= '1';
+        else
+            EQ <= '0';
+        end if;
+    end process;
+
+end architecture LOGIC;

@@ -9,7 +9,7 @@ ENTITY IFID is
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
         DATA_IN : IN DATA_REG_IF_ID;
-        DATA_OUT : OUT DATA_REG_IF_ID;
+        DATA_OUT : OUT DATA_REG_IF_ID
     );
 END IFID;
 

@@ -36,7 +36,22 @@ PACKAGE CPU_package is
         FLUSH    : std_logic;
         MEMTOREG : std_logic;
     END RECORD;
-
+	 
+	 COMPONENT CPU
+		PORT (
+        CLOCK: IN STD_LOGIC;
+        RESET: IN STD_LOGIC
+        --INSTANCIAR CONTEUDO LEDS
+		);
+	 END COMPONENT;
+	 
+	 COMPONENT REG16
+		PORT(
+			rst, clock, enable: IN STD_LOGIC;				--Sinais de Controle
+			d: IN DATA_T;	--Data-In
+			q: OUT DATA_T);	--Register Data
+	END COMPONENT;
+	 
     -- Banco de registradores
     COMPONENT REGBANK
         PORT(
@@ -76,9 +91,18 @@ PACKAGE CPU_package is
             MEM_READ  : IN  STD_LOGIC;
             ADDRESS   : IN  DATA_T;
             WRITE_DATA: IN  DATA_T;
-            READ_DATA : OUT DATA_T;
+            READ_DATA : OUT DATA_T
         );
     END COMPONENT;
+	 
+	 COMPONENT MEMORY_INST
+		PORT(
+        CLOCK: IN STD_LOGIC;
+        RESET: IN STD_LOGIC;
+        ADDRESS: IN DATA_T;
+        INSTRUCTION: OUT INST_T
+		);
+	 END COMPONENT;
 
     COMPONENT SIGN_EXT
         PORT(
@@ -92,15 +116,15 @@ PACKAGE CPU_package is
             HEX :OUT STD_LOGIC_VECTOR  (0 TO 6));
     END COMPONENT;
 
-    COMPONENT CONTROL_UNIT
+    COMPONENT CONTROL_UNITY
         PORT(
             CLOCK : IN STD_LOGIC;
             RESET : IN STD_LOGIC;
-            INSTRUCTION_TYPE : IN --VETOR
+            OPCODE : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
             COMPARE : IN STD_LOGIC;
             FUNC : IN STD_LOGIC;
             --ID
-            PC_SRC : OUT STD_LOGIC;
+            PC_SRC : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
             --EX
             ALUSRC : OUT STD_LOGIC;
             REGDST : OUT STD_LOGIC;
@@ -116,62 +140,155 @@ PACKAGE CPU_package is
 
     -- Unidade de adiantamento
     COMPONENT FORWARDING_UNIT
-        PORT (
-            CLOCK : IN STD_LOGIC;
-            RESET : IN STD_LOGIC;
-            
-            RS : IN 
-            RT : IN 
-            
-            REGWRITE_MEM : IN;
-            RDST_MEM : IN 
-            
-            REGWRITE_WB : IN
-            REGDST_WB : IN 
+		PORT (
+			CLOCK : IN STD_LOGIC;
+			RESET : IN STD_LOGIC;
+			--EX
+			RS : IN STD_LOGIC_VECTOR(3 DOWNTO 0); --PASSAR RS (3 DOWNTO 0) PARA REGS ID/EX
+			RT : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			--MEM
+			REGWRITE_MEM : IN STD_LOGIC;
+			REGDST_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			--WB
+			REGWRITE_WB : IN STD_LOGIC;
+			REGDST_WB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-            FOWARD_A : OUT 
-            FOWARD_B : OUT 
-        );
-    END COMPONENT;
-
-    COMPONENT PIPELINE_REGISTER
-        PORT (
-            D : IN DATA_SIZE;
-            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
-            Q : OUT DATA_SIZE
-        );
-    END COMPONENT;
+			FOWARD_A : OUT STD_LOGIC;
+			FOWARD_B : OUT STD_LOGIC
+			);
+	END COMPONENT;
 
     COMPONENT IFID
         PORT (
-            D : IN STD_LOGIC_VECTOR(31 downto 0);
-            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
-            Q : OUT STD_LOGIC_VECTOR(31 downto 0);
+			  CLOCK : IN STD_LOGIC;
+			  RESET : IN STD_LOGIC;
+			  DATA_IN : IN DATA_REG_IF_ID;
+			  DATA_OUT : OUT DATA_REG_IF_ID
         );  
     END COMPONENT;
 
     COMPONENT IDEX
         PORT (
-            D : IN STD_LOGIC_VECTOR(87 downto 0);
-            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
-            Q : OUT STD_LOGIC_VECTOR(87 downto 0);
+           CLOCK : IN STD_LOGIC;
+			  RESET : IN STD_LOGIC;
+			  FLUSH: IN STD_LOGIC;
+			  DATA_IN : IN DATA_REG_ID_EX;
+			  DATA_OUT : OUT DATA_REG_ID_EX
         );
     END COMPONENT;
 
     COMPONENT EXMEM
         PORT (
-            D : IN STD_LOGIC_VECTOR(35 downto 0);
-            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
-            Q : OUT STD_LOGIC_VECTOR(35 downto 0);
+           CLOCK : IN STD_LOGIC;
+			  RESET : IN STD_LOGIC;
+			  FLUSH: IN STD_LOGIC;
+			  DATA_IN : IN DATA_REG_EX_MEM;
+			  DATA_OUT : OUT DATA_REG_EX_MEM
         );
     END COMPONENT;
 
     COMPONENT MEMWB
         PORT (
-            D : IN STD_LOGIC_VECTOR(35 downto 0);
-            CLOCK, RESET, ENABLE : IN std_logic;    -- mudar de DATA_SIZE PARA STAGE_SIZE
-            Q : OUT STD_LOGIC_VECTOR(35 downto 0);
+           CLOCK : IN STD_LOGIC;
+			  RESET : IN STD_LOGIC;
+			  DATA_IN : IN DATA_REG_MEM_WB;
+			  DATA_OUT : OUT DATA_REG_MEM_WB
         );
     END COMPONENT;
+	 
+	 COMPONENT COMPARATOR
+		port (
+        A       : in  DATA_T;
+        B       : in  DATA_T;
+        EQ  : out std_logic
+		);
+	 END COMPONENT;
+	 
+	 COMPONENT SHIFT_LEFT_2
+		PORT(
+        IMMEDIATE_EXT : IN DATA_T;
+        IMMEDIATE_SHIFTED : OUT DATA_T
+		);
+	 END COMPONENT;
+	 
+	 COMPONENT FOWARDING_UNITY
+		PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        --EX
+        RS : IN STD_LOGIC_VECTOR(3 DOWNTO 0); --PASSAR RS (3 DOWNTO 0) PARA REGS ID/EX
+        RT : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        --MEM
+        REGWRITE_MEM : IN STD_LOGIC;
+        REGDST_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        --WB
+        REGWRITE_WB : IN STD_LOGIC;
+        REGDST_WB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+        FOWARD_A : OUT  STD_LOGIC_VECTOR(1 DOWNTO 0);
+        FOWARD_B : OUT  STD_LOGIC_VECTOR(1 DOWNTO 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT IF_STAGE
+		PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        PC_BRANCH : IN DATA_T;
+        PC_JUMP : IN DATA_T;
+        MUX_PC_SRC: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+        DATA_IF_ID : OUT DATA_REG_IF_ID
+		);
+	END COMPONENT;
+	
+	COMPONENT ID_STAGE
+		PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        DATA_WB: IN DATA_T;
+        REG_DST_ADDRESS : IN STD_LOGIC_VECTOR(REG_ADDR_SIZE-1 DOWNTO 0);-- DATA_ID, DATA_ID_EX
+        REGWRITE_WB : IN STD_LOGIC;
+        DATA_IN: IN DATA_REG_IF_ID;
+        DATA_OUT: OUT DATA_REG_ID_EX;
+        PC_SRC : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+        JUMP_ADDR : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+        BRANCH_ADDRESS : OUT DATA_T
+		);
+	END COMPONENT;
+	
+	COMPONENT EX_STAGE
+		PORT (
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        REG_DST_WB, REG_DST_MEM : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        REG_WRITE_WB, REG_WRITE_MEM  : IN STD_LOGIC;
+		  DATA_WB, DATA_MEM: IN DATA_T;
+        DATA_IN : IN DATA_REG_ID_EX;
+        DATA_OUT: OUT DATA_REG_EX_MEM
+		);
+	END COMPONENT;
+	
+	COMPONENT MEM_STAGE
+		PORT(
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        DATA_IN : IN DATA_REG_EX_MEM;
+        DATA_OUT: OUT DATA_REG_MEM_WB;
+		  DATA_FOWARD_EX: OUT DATA_T;
+		  REG_WRITE_FU : STD_LOGIC;
+		  REG_DST : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    );
+	END COMPONENT;
+	
+	COMPONENT WB_STAGE
+		PORT(
+        CLOCK : IN STD_LOGIC;
+        RESET : IN STD_LOGIC;
+        DATA_IN : IN DATA_REG_MEM_WB;
+        REGWRITE : OUT STD_LOGIC;
+        DATA_WB_ID : OUT DATA_T;
+        REG_DST: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
 END CPU_package;
 
