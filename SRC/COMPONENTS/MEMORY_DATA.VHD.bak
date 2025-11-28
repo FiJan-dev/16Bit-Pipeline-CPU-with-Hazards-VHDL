@@ -15,7 +15,7 @@ ENTITY DATA_MEMORY IS
         ADDRESS   : IN  DATA_T; -- Endereço em palavras
         WRITE_DATA: IN  DATA_T;
         
-        READ_DATA : OUT DATA_T
+        READ_DATA : OUT DATA_T;
     );
 END DATA_MEMORY;
 

@@ -18,32 +18,31 @@ ENTITY IF_STAGE is
 END IF_STAGE;
 
 architecture COMPORTAMENTO OF IF_STAGE is
-    SIGNAL PC : DATA_T := (OTHERS => '0'); --TODO://CONFERIR SE É INICIALIZADO APENAS 1 VEZ
-	 SIGNAL PC4 : DATA_T;
+    SIGNAL PC : UNSIGNED(DATA_T) := (OTHERS => '0'); --TODO://CONFERIR SE É INICIALIZADO APENAS 1 VEZ
     SIGNAL DATA_STREAM : INST_T;
-	 SIGNAL CARRY, OVERFLOW : STD_LOGIC;
 BEGIN
     MEM_INST: MEMORY_INST PORT MAP(CLOCK, RESET, PC, DATA_STREAM);
-	 
-	 PC_ADDER: ULA PORT MAP('0', x"0004", PC, PC4, CARRY, OVERFLOW);
 
     PROCESS(CLOCK, RESET, MUX_PC_SRC)
     begin
-			IF RESET = '1' THEN
-				PC <= (OTHERS => '0');
-			ELSIF RISING_EDGE(CLOCK) THEN
-				case MUX_PC_SRC is
-					WHEN "00" => --PC+4
-						 PC <= PC4; 
-					WHEN "01" =>  --BRANCH 
-						 PC <= PC_BRANCH;          
-					WHEN "10" => --JUMP
-						 PC <= PC_JUMP; --FAZER LOGICA EM ID PARA BRANCH CONCAT COM PC
-					WHEN OTHERS =>
-						PC <= PC4;
-				END CASE;
-			END IF;
+        case MUX_PC_SRC is
+            WHEN "00" => --PC+4
+                PC <= PC+4; 
+            WHEN "01"  --BRANCH 
+                PC <= PC_BRANCH;          
+            WHEN "10" => --JUMP
+                PC <= PC_JUMP; --FAZER LOGICA EM ID PARA BRANCH CONCAT COM PC
+        IF MUX_PC_SRC = "00"
+            PC <= PC + 4;
+        ELSE
+            PC <= PC_BRANCH;
+        END IF; 
 
+        IF RESET = '1' THEN
+            PC <= (OTHERS => '0');
+        ELSIF RISING_EDGE(CLOCK) THEN
+            PC <= NEXT_PC;
+        END IF;
     END PROCESS;
 
     -- 16 - 16
