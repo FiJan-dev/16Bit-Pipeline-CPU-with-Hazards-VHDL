@@ -1,0 +1,406 @@
+# Reading pref.tcl
+# do Projeto3_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:37 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package CPU_package
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ADDER
+# -- Compiling architecture logica of ADDER
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FOWARDING_UNITY
+# -- Compiling architecture COMPORTAMENTO of FOWARDING_UNITY
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CONTROL_UNITY
+# -- Compiling architecture LOGICA of CONTROL_UNITY
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity EX_STAGE
+# -- Compiling architecture COMPORTAMENTO of EX_STAGE
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity ID_STAGE
+# -- Compiling architecture COMPORTAMENTO of ID_STAGE
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:38 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity MEM_STAGE
+# -- Compiling architecture COMPORTAMENTO of MEM_STAGE
+# End time: 11:59:38 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity WB_STAGE
+# -- Compiling architecture COMPORTAMENTO of WB_STAGE
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package CPU_package
+# -- Compiling entity IF_STAGE
+# -- Compiling architecture COMPORTAMENTO of IF_STAGE
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity MEMWB
+# -- Compiling architecture LOGICA of MEMWB
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity IFID
+# -- Compiling architecture LOGICA of IFID
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity IDEX
+# -- Compiling architecture LOGICA of IDEX
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity EXMEM
+# -- Compiling architecture LOGICA of EXMEM
+# End time: 11:59:39 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:39 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity ULA
+# -- Compiling architecture logica of ULA
+# ** Warning: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD(20): (vcom-1514) Range choice direction (downto) does not determine aggregate index range direction (to).
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity SIGN_EXT
+# -- Compiling architecture LOGICA of SIGN_EXT
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity SHIFT_LEFT_2
+# -- Compiling architecture LOGICA of SHIFT_LEFT_2
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity REGBANK
+# -- Compiling architecture LOGICA of REGBANK
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity REG16
+# -- Compiling architecture LOGIC of REG16
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity MEMORY_INST
+# -- Compiling architecture LOGICA of MEMORY_INST
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:40 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity MEMORY_DATA
+# -- Compiling architecture LOGICA of MEMORY_DATA
+# End time: 11:59:40 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:41 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity DISPLAY
+# -- Compiling architecture LOGIC of DISPLAY
+# End time: 11:59:41 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:41 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity comparator
+# -- Compiling architecture LOGIC of comparator
+# End time: 11:59:41 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:41 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity CPUTOP
+# -- Compiling architecture LOGICA of CPUTOP
+# End time: 11:59:41 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:59:41 on Nov 28,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity CPU
+# -- Compiling architecture COMPOSICAO of CPU
+# End time: 11:59:41 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlib work
+ls
+# Projeto3_run_msim_rtl_vhdl.do       msim_transcript  
+# Projeto3_run_msim_rtl_vhdl.do.bak   rtl_work         
+# Projeto3_run_msim_rtl_vhdl.do.bak1  work             
+# modelsim.ini                                         
+vcom ../../../CPU_TOP_tb.hd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:01:57 on Nov 28,2025
+# vcom -reportprogress 300 ../../../CPU_TOP_tb.hd 
+# ** Error: (vcom-7) Failed to open design unit file "../../../CPU_TOP_tb.hd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 12:01:58 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+vcom ../../../CPU_TOP_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:02:01 on Nov 28,2025
+# vcom -reportprogress 300 ../../../CPU_TOP_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package CPU_package
+# -- Compiling entity CPU_TOP_tb
+# -- Compiling architecture sim of CPU_TOP_tb
+# -- Loading entity CPUTOP
+# End time: 12:02:01 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.CPU_TOP_tb
+# vsim work.CPU_TOP_tb 
+# Start time: 12:02:32 on Nov 28,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu_package
+# Loading work.cpu_top_tb(sim)
+# Loading work.cputop(logica)
+# Loading work.cpu(composicao)
+# Loading work.display(logic)
+# Loading ieee.std_logic_textio(body)
+# Loading work.if_stage(comportamento)
+# Loading work.memory_inst(logica)
+# Loading work.ula(logica)
+# Loading work.adder(logica)
+# Loading work.ifid(logica)
+# Loading work.id_stage(comportamento)
+# Loading work.comparator(logic)
+# Loading work.regbank(logica)
+# Loading work.reg16(logic)
+# Loading work.sign_ext(logica)
+# Loading work.shift_left_2(logica)
+# Loading work.control_unity(logica)
+# Loading work.idex(logica)
+# Loading work.ex_stage(comportamento)
+# Loading work.fowarding_unity(comportamento)
+# Loading work.exmem(logica)
+# Loading work.mem_stage(comportamento)
+# Loading work.memory_data(logica)
+# Loading work.memwb(logica)
+# Loading work.wb_stage(comportamento)
+# ** Warning: (vsim-8683) Uninitialized out port /cpu_top_tb/DUT/MAIN_CPU/MEM_ST/DATA_FOWARD_EX(15 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /cpu_top_tb/DUT/MAIN_CPU/MEM_ST/REG_DST(3 downto 0) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+add wave sim:/CPU_TOP_tb/CLOCK_50
+add wave sim:/CPU_TOP_tb/SW(16)
+add wave sim:/CPU_TOP_tb/KEY(3)
+
+add wave -r sim:/CPU_TOP_tb/DUT/MAIN_CPU/*
+
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/DUT/MAIN_CPU/MEM_ST/MEM
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/DUT/MAIN_CPU/ID_ST/COMPARATOR_COMPONENT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 4  Instance: /cpu_top_tb/DUT/MAIN_CPU/MEM_ST/MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 130 ns  Iteration: 4  Instance: /cpu_top_tb/DUT/MAIN_CPU/MEM_ST/MEM
+# Break key hit
+# Simulation stop requested.
+# End time: 12:08:49 on Nov 28,2025, Elapsed time: 0:06:17
+# Errors: 0, Warnings: 6

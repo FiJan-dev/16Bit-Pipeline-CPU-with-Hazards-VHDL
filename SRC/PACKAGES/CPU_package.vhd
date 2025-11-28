@@ -12,10 +12,13 @@ PACKAGE CPU_package is
     constant OP_BITS_SIZE   : integer := 3;
     constant FUNC_SIZE      : integer := 1;
     constant TYPE_BITS_SIZE : integer := 2;
+    constant PC_INCREMENT   : std_logic_vector(DATA_SIZE - 1 downto 0) := x"0001";      
 
     SUBTYPE DATA_T is std_logic_vector(DATA_SIZE - 1 downto 0);
     SUBTYPE INST_T is std_logic_vector(INST_SIZE-1 downto 0);
     SUBTYPE REG_ADDR_T is std_logic_vector(REG_ADDR_SIZE-1 downto 0);
+	 
+	 SUBTYPE DISPLAY_T IS STD_LOGIC_VECTOR(0 TO 6);
 
     SUBTYPE DATA_REG_IF_ID IS STD_LOGIC_VECTOR(31 DOWNTO 0);
     SUBTYPE DATA_REG_ID_EX IS STD_LOGIC_VECTOR(66 DOWNTO 0);
@@ -39,9 +42,16 @@ PACKAGE CPU_package is
 	 
 	 COMPONENT CPU
 		PORT (
-        CLOCK: IN STD_LOGIC;
-        RESET: IN STD_LOGIC
-        --INSTANCIAR CONTEUDO LEDS
+        CLOCK	: IN STD_LOGIC;
+        RESET	: IN STD_LOGIC;
+        HEX7	: OUT DISPLAY_T;
+		  HEX6   : OUT DISPLAY_T;
+		  HEX5   : OUT DISPLAY_T;
+		  HEX4   : OUT DISPLAY_T;
+		  HEX3   : OUT DISPLAY_T;
+		  HEX2   : OUT DISPLAY_T;
+		  HEX1   : OUT DISPLAY_T;
+		  HEX0   : OUT DISPLAY_T
 		);
 	 END COMPONENT;
 	 
@@ -113,7 +123,7 @@ PACKAGE CPU_package is
 
     COMPONENT DISPLAY
 	PORT(   SW : IN STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Configuração do Display para a vizualização dos números e letras
-            HEX :OUT STD_LOGIC_VECTOR  (0 TO 6));
+            HEX :OUT DISPLAY_T);
     END COMPONENT;
 
     COMPONENT CONTROL_UNITY
@@ -234,11 +244,13 @@ PACKAGE CPU_package is
 		PORT (
         CLOCK : IN STD_LOGIC;
         RESET : IN STD_LOGIC;
+		  PC_IN : IN DATA_T;
         PC_BRANCH : IN DATA_T;
         PC_JUMP : IN DATA_T;
         MUX_PC_SRC: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-        DATA_IF_ID : OUT DATA_REG_IF_ID
-		);
+        DATA_IF_ID : OUT DATA_REG_IF_ID;
+		  NEXT_PC_OUT: OUT DATA_T
+    );
 	END COMPONENT;
 	
 	COMPONENT ID_STAGE
@@ -290,5 +302,6 @@ PACKAGE CPU_package is
         REG_DST: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 		);
 	END COMPONENT;
+	
 END CPU_package;
 

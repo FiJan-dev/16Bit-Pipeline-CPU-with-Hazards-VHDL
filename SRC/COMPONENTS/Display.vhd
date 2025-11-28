@@ -1,9 +1,10 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE WORK.CPU_package.ALL;
 
 ENTITY DISPLAY IS
 	PORT(   SW : IN STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Configuração do Display para a vizualização dos números e letras
-            HEX :OUT STD_LOGIC_VECTOR  (0 TO 6));
+            HEX :OUT DISPLAY_T);
 END DISPLAY;
 	
 ARCHITECTURE LOGIC OF DISPLAY IS

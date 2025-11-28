@@ -6,16 +6,45 @@ USE WORK.CPU_package.ALL;
 ENTITY CPUTOP is
     PORT(
         CLOCK_50 : IN STD_LOGIC;
-        SW : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-		  KEY3: IN STD_LOGIC;
-		  KEY0: IN STD_LOGIC
+        SW       : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
+        KEY      : IN STD_LOGIC_VECTOR(3 DOWNTO 0);               
+        LEDG     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        HEX7     : OUT DISPLAY_T;
+		  HEX6     : OUT DISPLAY_T;
+		  HEX5     : OUT DISPLAY_T;
+		  HEX4     : OUT DISPLAY_T;
+		  HEX3     : OUT DISPLAY_T;
+		  HEX2     : OUT DISPLAY_T;
+		  HEX1     : OUT DISPLAY_T;
+		  HEX0     : OUT DISPLAY_T
     );
 END CPUTOP;
 
 ARCHITECTURE LOGICA OF CPUTOP is
-	SIGNAL CLOCK, RESET: STD_LOGIC;
+    SIGNAL RESET      : STD_LOGIC;
+    SIGNAL CLOCK      : STD_LOGIC;       
 begin
-	CLOCK <= NOT KEY3;
-	RESET <= NOT KEY0;
-   MAIN_CPU : CPU PORT MAP(CLOCK, RESET);
+
+    
+    RESET <= SW(16);
+	 LEDG(0) <= RESET;
+	 CLOCK <= NOT KEY(3);
+
+    
+    MAIN_CPU : CPU PORT MAP(
+        CLOCK,
+        RESET,
+        HEX7,
+		  HEX6,
+		  HEX5,
+		  HEX4,
+		  HEX3,
+		  HEX2,
+		  HEX1,
+		  HEX0
+    );
+
+    LEDG(7) <= CLOCK;
+    LEDG(6 downto 1) <= (others => '0');                 
+
 END LOGICA;

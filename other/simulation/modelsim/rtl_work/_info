@@ -1,0 +1,1107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/other/simulation/modelsim
+Eadder
+Z1 w1764341016
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD
+Z5 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD
+l0
+L4 1
+V=iDgW5:L0XH7GYK:E6?b[1
+!s100 ^WP=k8zTA9Ib8SM6CI2?m2
+Z6 OV;C;2020.1;71
+33
+Z7 !s110 1764341978
+!i10b 1
+Z8 !s108 1764341978.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD|
+Z10 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD|
+!i113 1
+Z11 o-2008 -work work
+Z12 tExplicit 1 CvgOpt 0
+Alogica
+R2
+R3
+DEx4 work 5 adder 0 22 =iDgW5:L0XH7GYK:E6?b[1
+!i122 1
+l12
+L11 5
+VG?3>0WbZQ9dkW[_h]W8eU0
+!s100 oH?E4NcHG]8[573NllG600
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecomparator
+R1
+Z13 DPx4 work 11 cpu_package 0 22 CASKF6MZhmE3C<ggdUI631
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 21
+R0
+Z15 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD
+Z16 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD
+l0
+L6 1
+VViTPF8b`o:bB>YEW9FBjL3
+!s100 6@ROaC:3HDilGkZfk0Y5X3
+R6
+33
+Z17 !s110 1764341981
+!i10b 1
+Z18 !s108 1764341981.000000
+Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD|
+Z20 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD|
+!i113 1
+R11
+R12
+Alogic
+R13
+R14
+R2
+R3
+DEx4 work 10 comparator 0 22 ViTPF8b`o:bB>YEW9FBjL3
+!i122 21
+l17
+L16 20
+V`Rh<Hl@kbnA43ocCAGf2^2
+!s100 ;zg4Gz5BPo3;TeXTN4aSV3
+R6
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Econtrol_unity
+R1
+R14
+R2
+R3
+!i122 3
+R0
+Z21 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD
+Z22 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD
+l0
+L5 1
+VQZbW89b>LZiZdQA`CXdEl2
+!s100 hCJ`]3LES;=LeUn_J<?=S0
+R6
+33
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD|
+Z24 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD|
+!i113 1
+R11
+R12
+Alogica
+R14
+R2
+R3
+DEx4 work 13 control_unity 0 22 QZbW89b>LZiZdQA`CXdEl2
+!i122 3
+l30
+L28 55
+VclV:K108R17O@Jc`?FM4Y3
+!s100 @eo?;a3bMccOlfmURIBT;2
+R6
+33
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12
+Ecpu
+R1
+R13
+R14
+R2
+R3
+!i122 23
+R0
+Z25 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD
+Z26 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD
+l0
+L7 1
+V^4F<IhWY==MaO^OSXFnbC1
+!s100 kAifdfkXS7bG4`oAh`fg62
+R6
+33
+R17
+!i10b 1
+R18
+Z27 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD|
+Z28 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD|
+!i113 1
+R11
+R12
+Acomposicao
+R13
+R14
+R2
+R3
+DEx4 work 3 cpu 0 22 ^4F<IhWY==MaO^OSXFnbC1
+!i122 23
+l53
+L15 68
+VQ<lYN?SQAE?U40[NE1jfh2
+!s100 D;TZCfH[<8;iH=LV]Y1j82
+R6
+33
+R17
+!i10b 1
+R18
+R27
+R28
+!i113 1
+R11
+R12
+Pcpu_package
+R14
+R2
+R3
+!i122 0
+R1
+R0
+8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd
+FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd
+l0
+L6 1
+VCASKF6MZhmE3C<ggdUI631
+!s100 IH9B;bYiXoQka7LB1>lb:0
+R6
+33
+R7
+!i10b 1
+!s108 1764341977.000000
+!s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd|
+!s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd|
+!i113 1
+R11
+R12
+Ecpu_top_tb
+Z29 w1764341877
+R13
+R14
+R2
+R3
+!i122 24
+R0
+Z30 8../../../CPU_TOP_tb.vhd
+Z31 F../../../CPU_TOP_tb.vhd
+l0
+L6 1
+VBH1jREN5Z3c]P]XeR8L<52
+!s100 g9KSF]>A1A8R7g?=K_2XD1
+R6
+32
+Z32 !s110 1764342121
+!i10b 1
+Z33 !s108 1764342121.000000
+Z34 !s90 -reportprogress|300|../../../CPU_TOP_tb.vhd|
+!s107 ../../../CPU_TOP_tb.vhd|
+!i113 1
+R12
+Asim
+Z35 DEx4 work 6 cputop 0 22 I=_AS9c=ihYHP5g>UJG3J3
+R13
+R14
+R2
+R3
+DEx4 work 10 cpu_top_tb 0 22 BH1jREN5Z3c]P]XeR8L<52
+!i122 24
+l20
+L9 52
+VdSG?O`Q;KH1LUoh]05^F^2
+!s100 D=MfA:ofjHVjSd8TM>]UR1
+R6
+32
+R32
+!i10b 1
+R33
+R34
+Z36 !s107 ../../../CPU_TOP_tb.vhd|
+!i113 1
+R12
+Ecputop
+R1
+R13
+R14
+R2
+R3
+!i122 22
+R0
+Z37 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD
+Z38 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD
+l0
+L6 1
+VI=_AS9c=ihYHP5g>UJG3J3
+!s100 EeHhQQ^zQ8ULlJ0OU<@ze0
+R6
+33
+R17
+!i10b 1
+R18
+Z39 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD|
+Z40 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+R35
+!i122 22
+l19
+L16 21
+Vm<aM:>9zLXS>92eZQn?1>1
+!s100 k]:]WXc72cK8oTG^ZQdF31
+R6
+33
+R17
+!i10b 1
+R18
+R39
+R40
+!i113 1
+R11
+R12
+Edisplay
+R1
+R14
+R13
+R2
+R3
+!i122 20
+R0
+Z41 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd
+Z42 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd
+l0
+L5 1
+VcRMDjKd9Zoa4Tjai:<7LD0
+!s100 A;nbFi26^3gH=8OW[T;5j2
+R6
+33
+R17
+!i10b 1
+R18
+Z43 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd|
+Z44 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd|
+!i113 1
+R11
+R12
+Alogic
+R14
+R13
+R2
+R3
+DEx4 work 7 display 0 22 cRMDjKd9Zoa4Tjai:<7LD0
+!i122 20
+l11
+L10 21
+VcZWb>fEKLn:O8k720]h8l3
+!s100 DXhZh[z@Ve:A8S6jR]Cz`0
+R6
+33
+R17
+!i10b 1
+R18
+R43
+R44
+!i113 1
+R11
+R12
+Eex_stage
+R1
+R13
+R14
+R2
+R3
+!i122 4
+R0
+Z45 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD
+Z46 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD
+l0
+L6 1
+VL=YhF;IfRZhf4Ka>8a5Oi3
+!s100 MDIKW:<aejln_Om9C9WQ^1
+R6
+33
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD|
+Z48 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R13
+R14
+R2
+R3
+DEx4 work 8 ex_stage 0 22 L=YhF;IfRZhf4Ka>8a5Oi3
+!i122 4
+l40
+L18 83
+VWXGWDefFTQ1TCTXTSPoKf1
+!s100 90=@nVOg7F8Y^kDES2VXj0
+R6
+33
+R7
+!i10b 1
+R8
+R47
+R48
+!i113 1
+R11
+R12
+Eexmem
+R1
+R13
+R14
+R2
+R3
+!i122 12
+R0
+Z49 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD
+Z50 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD
+l0
+L7 1
+V_GnQ0:D9X>`dzi9o`V>^U0
+!s100 ]c[aeE<kOOgBZkn;BT3oH1
+R6
+33
+Z51 !s110 1764341979
+!i10b 1
+Z52 !s108 1764341979.000000
+Z53 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD|
+Z54 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 5 exmem 0 22 _GnQ0:D9X>`dzi9o`V>^U0
+!i122 12
+l18
+Z55 L17 13
+VP5PZO]nDE8PhcQBml1K`I1
+!s100 ^SH97L_1?ikY^hg?Y@dlf2
+R6
+33
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R11
+R12
+Efowarding_unity
+R1
+R14
+R2
+R3
+!i122 2
+R0
+Z56 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD
+Z57 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD
+l0
+L5 1
+V50SSZPX91@QNAeghPWDIY2
+!s100 ]j3Dk@1_2BH`X^QSOfVd;0
+R6
+33
+R7
+!i10b 1
+R8
+Z58 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD|
+Z59 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R14
+R2
+R3
+DEx4 work 15 fowarding_unity 0 22 50SSZPX91@QNAeghPWDIY2
+!i122 2
+l25
+Z60 L24 33
+VQK13IE_aXOQiQLD96cQ4g0
+!s100 oZCEaoozCUEGBfEVV8gz^3
+R6
+33
+R7
+!i10b 1
+R8
+R58
+R59
+!i113 1
+R11
+R12
+Eid_stage
+R1
+R13
+R14
+R2
+R3
+!i122 5
+R0
+Z61 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD
+Z62 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD
+l0
+L6 1
+V:OC:WaKSEK:B@NYF_g`0N2
+!s100 GfG?N=nmo941fgm@jKBaH2
+R6
+33
+R7
+!i10b 1
+R8
+Z63 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD|
+Z64 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R13
+R14
+R2
+R3
+DEx4 work 8 id_stage 0 22 :OC:WaKSEK:B@NYF_g`0N2
+!i122 5
+l38
+R60
+Vb`G2<ha0J4Pah3^QHNnl>2
+!s100 >Dd=dIEi;FT]F?0FJ9^5G3
+R6
+33
+R7
+!i10b 1
+R8
+R63
+R64
+!i113 1
+R11
+R12
+Eidex
+R1
+R13
+R14
+R2
+R3
+!i122 11
+R0
+Z65 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD
+Z66 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD
+l0
+L7 1
+V=OP_d=W^0Ue0eIzaMbf3k3
+!s100 ]JCZB;Zn=AlNO>zB>fmK83
+R6
+33
+R51
+!i10b 1
+R52
+Z67 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD|
+Z68 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 4 idex 0 22 =OP_d=W^0Ue0eIzaMbf3k3
+!i122 11
+l18
+R55
+Vb6:=K7aZSFI35=c@Dh@1F0
+!s100 ;k85Ge_<FXDKg38]0MCGL2
+R6
+33
+R51
+!i10b 1
+R52
+R67
+R68
+!i113 1
+R11
+R12
+Eif_stage
+R1
+R13
+Z69 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R14
+R2
+R3
+!i122 8
+R0
+Z70 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD
+Z71 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD
+l0
+L9 1
+Vlac95]oWcVfN7zF8MfGGn0
+!s100 >>fJ30SFS<SSbZQ>N`g`T1
+R6
+33
+R51
+!i10b 1
+R52
+Z72 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD|
+Z73 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R13
+R69
+R14
+R2
+R3
+DEx4 work 8 if_stage 0 22 lac95]oWcVfN7zF8MfGGn0
+!i122 8
+l27
+L22 30
+VeSNa@>=W:JJDRhzVmkMTd1
+!s100 7X;7C^R07<3LWXEnl=L0Y1
+R6
+33
+R51
+!i10b 1
+R52
+R72
+R73
+!i113 1
+R11
+R12
+Eifid
+R1
+R13
+R14
+R2
+R3
+!i122 10
+R0
+Z74 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD
+Z75 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD
+l0
+L7 1
+VKmb;lf2;U=bfhi<XDzf?P3
+!s100 Dk^FScNLa1a]ZS4fnz;zW1
+R6
+33
+R51
+!i10b 1
+R52
+Z76 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD|
+Z77 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 4 ifid 0 22 Kmb;lf2;U=bfhi<XDzf?P3
+!i122 10
+l17
+Z78 L16 11
+V^CL[Pc:JiG@fD82JANc@h2
+!s100 e@Hll7JK0_Nh9PQClfK3K0
+R6
+33
+R51
+!i10b 1
+R52
+R76
+R77
+!i113 1
+R11
+R12
+Emem_stage
+R1
+R13
+R14
+R2
+R3
+!i122 6
+R0
+Z79 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD
+Z80 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD
+l0
+L6 1
+V`ADW:Ha`L7XD`Z=hM;d9f1
+!s100 o5D9]HhkEahX>o:ajkNZn1
+R6
+33
+R7
+!i10b 1
+R8
+Z81 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD|
+Z82 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R13
+R14
+R2
+R3
+DEx4 work 9 mem_stage 0 22 `ADW:Ha`L7XD`Z=hM;d9f1
+!i122 6
+l21
+L18 14
+V<?H12PaH>2C<Ye3S8>n2l2
+!s100 iS]?PnLI=B?Y3S=Bz>XF`3
+R6
+33
+R7
+!i10b 1
+R8
+R81
+R82
+!i113 1
+R11
+R12
+Ememory_data
+R1
+R13
+R14
+R2
+R3
+!i122 19
+R0
+Z83 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD
+Z84 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD
+l0
+L6 1
+VUkQ1n>HjE4<2kE>0[EcIQ1
+!s100 h[>[HF?[GaM?2;P:_XSNX0
+R6
+33
+Z85 !s110 1764341980
+!i10b 1
+Z86 !s108 1764341980.000000
+Z87 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD|
+Z88 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 11 memory_data 0 22 UkQ1n>HjE4<2kE>0[EcIQ1
+!i122 19
+l28
+L22 26
+VEUgCl2]nO8G8e_2HWVbXF3
+!s100 zIibOj^MEc;N?4KgTW=?^1
+R6
+33
+R85
+!i10b 1
+R86
+R87
+R88
+!i113 1
+R11
+R12
+Ememory_inst
+R1
+R13
+R14
+R2
+R3
+!i122 18
+R0
+Z89 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD
+Z90 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD
+l0
+L6 1
+VMM]QR]m>z_P6369_kY7F:3
+!s100 d;Af=?XCFVk^_6KOdB`hY0
+R6
+33
+R85
+!i10b 1
+R86
+Z91 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD|
+Z92 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 11 memory_inst 0 22 MM]QR]m>z_P6369_kY7F:3
+!i122 18
+l41
+L15 40
+V>Z``B79e:1QUhzXJJ:9QJ2
+!s100 k3<5n=<Q4XEGa>GC[`j9Q2
+R6
+33
+R85
+!i10b 1
+R86
+R91
+R92
+!i113 1
+R11
+R12
+Ememwb
+R1
+R13
+R14
+R2
+R3
+!i122 9
+R0
+Z93 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD
+Z94 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD
+l0
+L7 1
+V>X0PkY?miLg@C;o:[QHUl2
+!s100 CVb?nzhao3aRn3;IZ2ge40
+R6
+33
+R51
+!i10b 1
+R52
+Z95 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD|
+Z96 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 5 memwb 0 22 >X0PkY?miLg@C;o:[QHUl2
+!i122 9
+l17
+R78
+V]i0Zo@lEU06k7z=QA;G5L0
+!s100 BC^A<nZfgXNNohBE71<kV0
+R6
+33
+R51
+!i10b 1
+R52
+R95
+R96
+!i113 1
+R11
+R12
+Ereg16
+R1
+R14
+R13
+R2
+R3
+!i122 17
+R0
+Z97 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd
+Z98 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd
+l0
+L5 1
+Vjbgn?2FKl<cG=DI;NTYCb3
+!s100 Vc3`h:lc71_c@^Cbo7G3=1
+R6
+33
+R85
+!i10b 1
+R86
+Z99 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd|
+Z100 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd|
+!i113 1
+R11
+R12
+Alogic
+R14
+R13
+R2
+R3
+DEx4 work 5 reg16 0 22 jbgn?2FKl<cG=DI;NTYCb3
+!i122 17
+l13
+L11 15
+V^PY_I2zd8CGDe_T09C3I<3
+!s100 jdZlagQUJ@>7hYI^nSPn03
+R6
+33
+R85
+!i10b 1
+R86
+R99
+R100
+!i113 1
+R11
+R12
+Eregbank
+R1
+R13
+R14
+R2
+R3
+!i122 16
+R0
+Z101 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD
+Z102 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD
+l0
+L7 1
+VSW4DZO>eoKD1zokCgcZaV3
+!s100 afgTOI<zF_<IUUVb04in;1
+R6
+33
+R85
+!i10b 1
+R86
+Z103 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD|
+Z104 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 7 regbank 0 22 SW4DZO>eoKD1zokCgcZaV3
+!i122 16
+l30
+L18 100
+V1^l5<]5O:5[dAJa2KFDRN1
+!s100 WRi:5e?C=8JEg0WOcETIM3
+R6
+33
+R85
+!i10b 1
+R86
+R103
+R104
+!i113 1
+R11
+R12
+Eshift_left_2
+R1
+R13
+R14
+R2
+R3
+!i122 15
+R0
+Z105 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD
+Z106 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD
+l0
+L6 1
+VIhXW1^OH==ol6`d9R_Mf01
+!s100 8<H<fRaDQF:8hUQh1SgQN1
+R6
+33
+R85
+!i10b 1
+R86
+Z107 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD|
+Z108 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 12 shift_left_2 0 22 IhXW1^OH==ol6`d9R_Mf01
+!i122 15
+l14
+L13 4
+Vi=gmkf3z<B^iz?@S4Pk[40
+!s100 Q=[;54U2IBTLgzQQPPE;41
+R6
+33
+R85
+!i10b 1
+R86
+R107
+R108
+!i113 1
+R11
+R12
+Esign_ext
+R1
+R13
+R14
+R2
+R3
+!i122 14
+R0
+Z109 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD
+Z110 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD
+l0
+L7 1
+VYe=NcM4:E8LVn68_QRJFk3
+!s100 SFz08kBNKeflkhU:GAcE^1
+R6
+33
+R85
+!i10b 1
+R86
+Z111 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD|
+Z112 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD|
+!i113 1
+R11
+R12
+Alogica
+R13
+R14
+R2
+R3
+DEx4 work 8 sign_ext 0 22 Ye=NcM4:E8LVn68_QRJFk3
+!i122 14
+l15
+L14 4
+VKjOc1S:Rl68L2>UYg09]g2
+!s100 YA8g592Y@iGX=he4BW<7N3
+R6
+33
+R85
+!i10b 1
+R86
+R111
+R112
+!i113 1
+R11
+R12
+Eula
+R1
+R14
+R13
+R2
+R3
+!i122 13
+R0
+Z113 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD
+Z114 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD
+l0
+L6 1
+Vl6<Bon190c9?JLcja5ddg2
+!s100 n[TaLle>JSaIZC]d0keHc0
+R6
+33
+R85
+!i10b 1
+R52
+Z115 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD|
+Z116 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD|
+!i113 1
+R11
+R12
+Alogica
+R14
+R13
+R2
+R3
+DEx4 work 3 ula 0 22 l6<Bon190c9?JLcja5ddg2
+!i122 13
+l19
+L15 24
+V?5;M_joYj9KZ<bQ9JCL6=2
+!s100 HUL7;:2gb2he=0`[lCCdi0
+R6
+33
+R85
+!i10b 1
+R52
+R115
+R116
+!i113 1
+R11
+R12
+Ewb_stage
+R1
+R13
+R14
+R2
+R3
+!i122 7
+R0
+Z117 8C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD
+Z118 FC:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD
+l0
+L6 1
+V>nB:>:N<efYBcP_5SiNOJ3
+!s100 CT2;BaQBc]`>U_n6I`DR03
+R6
+33
+R51
+!i10b 1
+R52
+Z119 !s90 -reportprogress|300|-2008|-work|work|C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD|
+Z120 !s107 C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD|
+!i113 1
+R11
+R12
+Acomportamento
+R13
+R14
+R2
+R3
+DEx4 work 8 wb_stage 0 22 >nB:>:N<efYBcP_5SiNOJ3
+!i122 7
+l21
+L17 22
+VbZQ[nS3jJ1znzW00JhCFB0
+!s100 hVfifVj1aRIf]6WKgj9Ag1
+R6
+33
+R51
+!i10b 1
+R52
+R119
+R120
+!i113 1
+R11
+R12

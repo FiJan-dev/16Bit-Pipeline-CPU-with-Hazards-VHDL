@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Debounce is
+    generic (
+        CLK_FREQ  : integer := 50_000_000;
+        TIME_MS   : integer := 20
+    );
+    port (
+        clk      : in  std_logic;
+        button   : in  std_logic;
+        clean    : out std_logic
+    );
+end entity;
+
+architecture rtl of Debounce is
+    constant MAX_COUNT : integer := (CLK_FREQ / 1000) * TIME_MS;
+    signal count  : integer range 0 to MAX_COUNT := 0;
+    signal sync_0, sync_1, state : std_logic := '0';
+begin
+
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            sync_0 <= button;
+            sync_1 <= sync_0;
+        end if;
+    end process;
+
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if sync_1 /= state then
+                count <= 0;
+            elsif count < MAX_COUNT then
+                count <= count + 1;
+            else
+                state <= sync_1;
+            end if;
+        end if;
+    end process;
+
+    clean <= state;
+
+end architecture;

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Projeto3
-Mon Oct 20 09:59:50 2025
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Nov 28 13:18:32 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,14 +10,37 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST
+ 15. Port Connectivity Checks: "CPU:MAIN_CPU|MEM_STAGE:MEM_ST"
+ 16. Port Connectivity Checks: "CPU:MAIN_CPU|EXMEM:EX_MEM"
+ 17. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER"
+ 18. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX"
+ 19. Port Connectivity Checks: "CPU:MAIN_CPU|IDEX:ID_EX"
+ 20. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU"
+ 21. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|ULA:BRANCH_ADDER"
+ 22. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST"
+ 23. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER"
+ 24. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST"
+ 25. Port Connectivity Checks: "CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,20 +60,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 20 09:59:50 2025           ;
-; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 28 13:18:32 2025       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto3                                    ;
-; Top-level Entity Name              ; Projeto3                                    ;
+; Top-level Entity Name              ; CPUTOP                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 672                                         ;
+;     Total combinational functions  ; 410                                         ;
+;     Dedicated logic registers      ; 385                                         ;
+; Total registers                    ; 385                                         ;
+; Total pins                         ; 86                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -60,8 +83,10 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; Projeto3           ; Projeto3           ;
+; Top-level entity name                                            ; CPUTOP             ; Projeto3           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -70,7 +95,6 @@ https://fpgasoftware.intel.com/eula.
 ; Preserve fewer node names                                        ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                         ; Auto               ; Auto               ;
 ; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
@@ -145,15 +169,457 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
++------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; ../SRC/PIPELINE/EX_STAGE.VHD                   ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD                   ;         ;
+; ../SRC/PIPELINE/ID_STAGE.VHD                   ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD                   ;         ;
+; ../SRC/PIPELINE/MEM_STAGE.VHD                  ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD                  ;         ;
+; ../SRC/PIPELINE/WB_STAGE.VHD                   ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD                   ;         ;
+; ../SRC/PIPELINE/IF_STAGE.VHD                   ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD                   ;         ;
+; ../SRC/PACKAGES/CPU_package.vhd                ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd                ;         ;
+; ../SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD     ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD     ;         ;
+; ../SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD ;         ;
+; ../SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD  ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD  ;         ;
+; ../SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD  ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD  ;         ;
+; ../SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD ;         ;
+; ../SRC/COMPONENTS/ULA.VHD                      ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD                      ;         ;
+; ../SRC/COMPONENTS/SIGN_EXT.VHD                 ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD                 ;         ;
+; ../SRC/COMPONENTS/SHIFT_LEFT_2.VHD             ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD             ;         ;
+; ../SRC/COMPONENTS/REGBANK.VHD                  ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD                  ;         ;
+; ../SRC/COMPONENTS/REG16.vhd                    ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd                    ;         ;
+; ../SRC/COMPONENTS/MEMORY_INST.VHD              ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD              ;         ;
+; ../SRC/COMPONENTS/MEMORY_DATA.VHD              ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD              ;         ;
+; ../SRC/COMPONENTS/FOWARDING_UNITY.VHD          ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD          ;         ;
+; ../SRC/COMPONENTS/Display.vhd                  ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd                  ;         ;
+; ../SRC/COMPONENTS/CONTROL_UNITY.VHD            ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD            ;         ;
+; ../SRC/COMPONENTS/COMPARATOR.VHD               ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD               ;         ;
+; ../SRC/COMPONENTS/CPUTOP.VHD                   ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD                   ;         ;
+; ../SRC/COMPONENTS/CPU.VHD                      ; yes             ; User VHDL File  ; C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD                      ;         ;
++------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 672          ;
+;                                             ;              ;
+; Total combinational functions               ; 410          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 294          ;
+;     -- 3 input functions                    ; 28           ;
+;     -- <=2 input functions                  ; 88           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 410          ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 385          ;
+;     -- Dedicated logic registers            ; 385          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 86           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[3]~input ;
+; Maximum fan-out                             ; 386          ;
+; Total fan-out                               ; 2697         ;
+; Average fan-out                             ; 2.79         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name   ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
+; |CPUTOP                               ; 410 (0)             ; 385 (0)                   ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |CPUTOP                                                                          ; CPUTOP        ; work         ;
+;    |CPU:MAIN_CPU|                     ; 410 (0)             ; 385 (8)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU                                                             ; CPU           ; work         ;
+;       |DISPLAY:DISPLAY_HEX0|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX0                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX1|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX1                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX2|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX2                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX3|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX3                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX4|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX4                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX5|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX6|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX6                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX7|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX7                                        ; DISPLAY       ; work         ;
+;       |EXMEM:EX_MEM|                  ; 0 (0)               ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EXMEM:EX_MEM                                                ; EXMEM         ; work         ;
+;       |EX_STAGE:EX|                   ; 21 (4)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX                                                 ; EX_STAGE      ; work         ;
+;          |ULA:ULA_ADDER|              ; 17 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER                                   ; ULA           ; work         ;
+;             |ADDER:\ADDERS:0:ADDER_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:0:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:1:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:2:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:2:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:3:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:3:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:4:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:5:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:5:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:6:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:6:ADDER_i           ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:7:ADDER_i           ; ADDER         ; work         ;
+;       |IDEX:ID_EX|                    ; 1 (1)               ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX                                                  ; IDEX          ; work         ;
+;       |ID_STAGE:ID_ST|                ; 21 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST                                              ; ID_STAGE      ; work         ;
+;          |CONTROL_UNITY:CU|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU                             ; CONTROL_UNITY ; work         ;
+;          |REGBANK:REGBANK_INST|       ; 18 (18)             ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST                         ; REGBANK       ; work         ;
+;             |REG16:\GEN_REGS:0:REG_i| ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ; REG16         ; work         ;
+;       |IFID:IF_ID|                    ; 0 (0)               ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IFID:IF_ID                                                  ; IFID          ; work         ;
+;       |IF_STAGE:IF_ST|                ; 39 (1)              ; 23 (8)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST                                              ; IF_STAGE      ; work         ;
+;          |MEMORY_INST:MEM_INST|       ; 29 (29)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST                         ; MEMORY_INST   ; work         ;
+;          |ULA:PC_ADDER|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER                                 ; ULA           ; work         ;
+;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:1:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:2:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:2:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:3:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:3:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:4:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:5:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:5:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:6:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:6:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:7:ADDER_i         ; ADDER         ; work         ;
+;       |MEMWB:MEM_WB|                  ; 0 (0)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB                                                ; MEMWB         ; work         ;
+;       |MEM_STAGE:MEM_ST|              ; 263 (0)             ; 256 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST                                            ; MEM_STAGE     ; work         ;
+;          |MEMORY_DATA:MEM|            ; 263 (263)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM                            ; MEMORY_DATA   ; work         ;
+;       |WB_STAGE:WB_ST|                ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|WB_STAGE:WB_ST                                              ; WB_STAGE      ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                ;
++------------------------------------------------------+----------------------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                                ; Free of Timing Hazards ;
++------------------------------------------------------+----------------------------------------------------+------------------------+
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST  ; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10 ; yes                    ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG ; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10 ; yes                    ;
+; Number of user-specified and inferred latches = 2    ;                                                    ;                        ;
++------------------------------------------------------+----------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                ;
++-------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                       ; Reason for Removal                          ;
++-------------------------------------------------------------------------------------+---------------------------------------------+
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[8..11]                                             ; Lost fanout                                 ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:14:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:13:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:12:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:11:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:9:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:8:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:5:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:4:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[4]                     ; Stuck at GND due to stuck port data_in      ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4]                                                 ; Stuck at GND due to stuck port data_in      ;
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3]                                                 ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 127                                             ;                                             ;
++-------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                            ;
++-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[4] ; Stuck at GND              ; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3] ;
+;                                                                 ; due to stuck port data_in ;                                                                          ;
++-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 385   ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 114   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 261   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Inverted Register Statistics                                       ;
++----------------------------------------------------------+---------+
+; Inverted Register                                        ; Fan out ;
++----------------------------------------------------------+---------+
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][0]  ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][1] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1] ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][1] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][2] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][2] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][2] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][3]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][4] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][4]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][4]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][5]  ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][5] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][5]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][5] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][6]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][6]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][6] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][6] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][7] ; 1       ;
+; Total number of inverted registers = 44                  ;         ;
++----------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][6]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][0]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][6]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][0]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][7]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][3]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][1]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][5]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][6] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][6] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3] ;
+; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[25]                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][6]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][4]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; ADDR_SIZE      ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|MEM_STAGE:MEM_ST" ;
++--------------+-------+----------+-------------------------+
+; Port         ; Type  ; Severity ; Details                 ;
++--------------+-------+----------+-------------------------+
+; reg_write_fu ; Input ; Info     ; Stuck at GND            ;
++--------------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|EXMEM:EX_MEM" ;
++-------+-------+----------+----------------------------+
+; Port  ; Type  ; Severity ; Details                    ;
++-------+-------+----------+----------------------------+
+; flush ; Input ; Info     ; Stuck at GND               ;
++-------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER"                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX" ;
++---------------+-------+----------+-------------------+
+; Port          ; Type  ; Severity ; Details           ;
++---------------+-------+----------+-------------------+
+; reg_write_wb  ; Input ; Info     ; Stuck at GND      ;
+; reg_write_mem ; Input ; Info     ; Stuck at GND      ;
++---------------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|IDEX:ID_EX" ;
++-------+-------+----------+--------------------------+
+; Port  ; Type  ; Severity ; Details                  ;
++-------+-------+----------+--------------------------+
+; flush ; Input ; Info     ; Stuck at GND             ;
++-------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU"                                                                ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; func_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|ULA:BRANCH_ADDER"                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST"                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; reg_dst_address ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pc_src          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jump_addr       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; branch_address  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER"                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST" ;
++------------+-------+----------+-------------------------+
+; Port       ; Type  ; Severity ; Details                 ;
++------------+-------+----------+-------------------------+
+; pc_branch  ; Input ; Info     ; Stuck at GND            ;
+; pc_jump    ; Input ; Info     ; Stuck at GND            ;
+; mux_pc_src ; Input ; Info     ; Stuck at GND            ;
++------------+-------+----------+-------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5" ;
++-------+-------+----------+------------------------------------+
+; Port  ; Type  ; Severity ; Details                            ;
++-------+-------+----------+------------------------------------+
+; sw[3] ; Input ; Info     ; Stuck at VCC                       ;
++-------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 86                          ;
+; cycloneiii_ff         ; 385                         ;
+;     CLR               ; 106                         ;
+;     ENA               ; 253                         ;
+;     ENA CLR           ; 8                           ;
+;     SCLR              ; 15                          ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 420                         ;
+;     normal            ; 420                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 52                          ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 294                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,23 +627,220 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Oct 20 09:59:48 2025
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 28 13:18:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto3 -c Projeto3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at REG16.vhd(18) near text "ELSIF";  expecting ";" File: /home/jansen/Documentos/Arquitetura/Projeto3/REG16.vhd Line: 18
-Error (10500): VHDL syntax error at REG16.vhd(22) near text "IF";  expecting "process" File: /home/jansen/Documentos/Arquitetura/Projeto3/REG16.vhd Line: 22
-Info (12021): Found 0 design units, including 0 entities, in source file REG16.vhd
-Error (10500): VHDL syntax error at banco_registradores.vhd(45) near text "end generate;";  expecting ";" File: /home/jansen/Documentos/Arquitetura/Projeto3/banco_registradores.vhd Line: 45
-Error (10500): VHDL syntax error at banco_registradores.vhd(45) near text  File: /home/jansen/Documentos/Arquitetura/Projeto3/banco_registradores.vhd Line: 45
-Info (12021): Found 0 design units, including 0 entities, in source file banco_registradores.vhd
-Error (10500): VHDL syntax error at regbank_pkg.vhd(10) near text ":=";  expecting ":", or "," File: /home/jansen/Documentos/Arquitetura/Projeto3/regbank_pkg.vhd Line: 10
-Info (12021): Found 0 design units, including 0 entities, in source file regbank_pkg.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 1 warning
-    Error: Peak virtual memory: 903 megabytes
-    Error: Processing ended: Mon Oct 20 09:59:50 2025
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:04
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/pipeline/ex_stage.vhd
+    Info (12022): Found design unit 1: EX_STAGE-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 18
+    Info (12023): Found entity 1: EX_STAGE File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/pipeline/id_stage.vhd
+    Info (12022): Found design unit 1: ID_STAGE-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 24
+    Info (12023): Found entity 1: ID_STAGE File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/pipeline/mem_stage.vhd
+    Info (12022): Found design unit 1: MEM_STAGE-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD Line: 18
+    Info (12023): Found entity 1: MEM_STAGE File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/pipeline/wb_stage.vhd
+    Info (12022): Found design unit 1: WB_STAGE-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 17
+    Info (12023): Found entity 1: WB_STAGE File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/pipeline/if_stage.vhd
+    Info (12022): Found design unit 1: IF_STAGE-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 22
+    Info (12023): Found entity 1: IF_STAGE File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/packages/cpu_package.vhd
+    Info (12022): Found design unit 1: CPU_package File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PACKAGES/CPU_package.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/ula_components/adder.vhd
+    Info (12022): Found design unit 1: ADDER-logica File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD Line: 11
+    Info (12023): Found entity 1: ADDER File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA_COMPONENTS/ADDER.VHD Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/pipeline_registers/memwb.vhd
+    Info (12022): Found design unit 1: MEMWB-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD Line: 16
+    Info (12023): Found entity 1: MEMWB File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/MEMWB.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/pipeline_registers/ifid.vhd
+    Info (12022): Found design unit 1: IFID-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 16
+    Info (12023): Found entity 1: IFID File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/pipeline_registers/idex.vhd
+    Info (12022): Found design unit 1: IDEX-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD Line: 17
+    Info (12023): Found entity 1: IDEX File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/pipeline_registers/exmem.vhd
+    Info (12022): Found design unit 1: EXMEM-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD Line: 17
+    Info (12023): Found entity 1: EXMEM File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/ula.vhd
+    Info (12022): Found design unit 1: ULA-logica File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD Line: 15
+    Info (12023): Found entity 1: ULA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/sign_ext.vhd
+    Info (12022): Found design unit 1: SIGN_EXT-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD Line: 14
+    Info (12023): Found entity 1: SIGN_EXT File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SIGN_EXT.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/shift_left_2.vhd
+    Info (12022): Found design unit 1: SHIFT_LEFT_2-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD Line: 13
+    Info (12023): Found entity 1: SHIFT_LEFT_2 File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/SHIFT_LEFT_2.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/regbank.vhd
+    Info (12022): Found design unit 1: REGBANK-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 18
+    Info (12023): Found entity 1: REGBANK File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/reg16.vhd
+    Info (12022): Found design unit 1: REG16-LOGIC File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd Line: 11
+    Info (12023): Found entity 1: REG16 File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/memory_inst.vhd
+    Info (12022): Found design unit 1: MEMORY_INST-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 15
+    Info (12023): Found entity 1: MEMORY_INST File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/memory_data.vhd
+    Info (12022): Found design unit 1: MEMORY_DATA-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD Line: 22
+    Info (12023): Found entity 1: MEMORY_DATA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/fowarding_unity.vhd
+    Info (12022): Found design unit 1: FOWARDING_UNITY-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 24
+    Info (12023): Found entity 1: FOWARDING_UNITY File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/display.vhd
+    Info (12022): Found design unit 1: DISPLAY-LOGIC File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd Line: 10
+    Info (12023): Found entity 1: DISPLAY File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/Display.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/control_unity.vhd
+    Info (12022): Found design unit 1: CONTROL_UNITY-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 28
+    Info (12023): Found entity 1: CONTROL_UNITY File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/comparator.vhd
+    Info (12022): Found design unit 1: comparator-LOGIC File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD Line: 16
+    Info (12023): Found entity 1: comparator File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/COMPARATOR.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/cputop.vhd
+    Info (12022): Found design unit 1: CPUTOP-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 23
+    Info (12023): Found entity 1: CPUTOP File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/cpu.vhd
+    Info (12022): Found design unit 1: CPU-COMPOSICAO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 22
+    Info (12023): Found entity 1: CPU File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/debouncer.vhd
+    Info (12022): Found design unit 1: DEBOUNCER-COMPORTAMENTO File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/DEBOUNCER.vhd Line: 17
+    Info (12023): Found entity 1: DEBOUNCER File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/DEBOUNCER.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/cpu_top_tb.vhd
+    Info (12022): Found design unit 1: CPU_TOP_tb-sim File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/CPU_TOP_tb.vhd Line: 9
+    Info (12023): Found entity 1: CPU_TOP_tb File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/CPU_TOP_tb.vhd Line: 6
+Info (12127): Elaborating entity "CPUTOP" for the top level hierarchy
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:MAIN_CPU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 34
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(27): used explicit default value for signal "PC_BRANCH" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 27
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(28): used explicit default value for signal "PC_JUMP" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 28
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(33): used explicit default value for signal "MUX_PC_SRC" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 33
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(49): used explicit default value for signal "REG_DST" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 49
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(55): used explicit default value for signal "MUX_FLUSH_ID" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 55
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(56): used explicit default value for signal "MUX_FLUSH_EX" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 56
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(57): used explicit default value for signal "REG_WRITE_WB" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 57
+Warning (10540): VHDL Signal Declaration warning at CPU.VHD(58): used explicit default value for signal "REG_WRITE_MEM" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 58
+Info (12128): Elaborating entity "DISPLAY" for hierarchy "CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX7" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 73
+Info (12128): Elaborating entity "IF_STAGE" for hierarchy "CPU:MAIN_CPU|IF_STAGE:IF_ST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 85
+Warning (10036): Verilog HDL or VHDL warning at IF_STAGE.VHD(26): object "CARRY" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 26
+Warning (10036): Verilog HDL or VHDL warning at IF_STAGE.VHD(26): object "OVERFLOW" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 26
+Info (12128): Elaborating entity "MEMORY_INST" for hierarchy "CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 28
+Info (12128): Elaborating entity "ULA" for hierarchy "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/IF_STAGE.VHD Line: 30
+Info (12128): Elaborating entity "ADDER" for hierarchy "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:0:ADDER_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/ULA.VHD Line: 25
+Info (12128): Elaborating entity "IFID" for hierarchy "CPU:MAIN_CPU|IFID:IF_ID" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 86
+Info (12128): Elaborating entity "ID_STAGE" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 88
+Warning (10036): Verilog HDL or VHDL warning at ID_STAGE.VHD(37): object "CARRY" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 37
+Warning (10036): Verilog HDL or VHDL warning at ID_STAGE.VHD(37): object "OVERFLOW" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 37
+Info (12128): Elaborating entity "comparator" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|comparator:COMPARATOR_COMPONENT" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 48
+Info (12128): Elaborating entity "REGBANK" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 49
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 76
+Info (12128): Elaborating entity "SIGN_EXT" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|SIGN_EXT:SIGN_EXT_INST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 51
+Info (12128): Elaborating entity "SHIFT_LEFT_2" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|SHIFT_LEFT_2:SLL2" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 52
+Info (12128): Elaborating entity "CONTROL_UNITY" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 53
+Warning (10492): VHDL Process Statement warning at CONTROL_UNITY.VHD(41): signal "FUNC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 41
+Warning (10492): VHDL Process Statement warning at CONTROL_UNITY.VHD(48): signal "BRANCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 48
+Warning (10631): VHDL Process Statement warning at CONTROL_UNITY.VHD(31): inferring latch(es) for signal or variable "ALUSRC", which holds its previous value in one or more paths through the process File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Warning (10631): VHDL Process Statement warning at CONTROL_UNITY.VHD(31): inferring latch(es) for signal or variable "REGDST", which holds its previous value in one or more paths through the process File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Warning (10631): VHDL Process Statement warning at CONTROL_UNITY.VHD(31): inferring latch(es) for signal or variable "MEM2REG", which holds its previous value in one or more paths through the process File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Warning (10631): VHDL Process Statement warning at CONTROL_UNITY.VHD(31): inferring latch(es) for signal or variable "FUNC_OUT", which holds its previous value in one or more paths through the process File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Warning (10631): VHDL Process Statement warning at CONTROL_UNITY.VHD(31): inferring latch(es) for signal or variable "BRANCH", which holds its previous value in one or more paths through the process File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (10041): Inferred latch for "BRANCH" at CONTROL_UNITY.VHD(31) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (10041): Inferred latch for "FUNC_OUT" at CONTROL_UNITY.VHD(31) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (10041): Inferred latch for "MEM2REG" at CONTROL_UNITY.VHD(31) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (10041): Inferred latch for "REGDST" at CONTROL_UNITY.VHD(31) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (10041): Inferred latch for "ALUSRC" at CONTROL_UNITY.VHD(31) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 31
+Info (12128): Elaborating entity "IDEX" for hierarchy "CPU:MAIN_CPU|IDEX:ID_EX" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 89
+Warning (10492): VHDL Process Statement warning at IDEX.VHD(23): signal "FLUSH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IDEX.VHD Line: 23
+Info (12128): Elaborating entity "EX_STAGE" for hierarchy "CPU:MAIN_CPU|EX_STAGE:EX" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 91
+Warning (10036): Verilog HDL or VHDL warning at EX_STAGE.VHD(28): object "ALU_SRC" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 28
+Warning (10541): VHDL Signal Declaration warning at EX_STAGE.VHD(30): used implicit default value for signal "MUX_SRCB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 30
+Warning (10036): Verilog HDL or VHDL warning at EX_STAGE.VHD(32): object "CARRY" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 32
+Warning (10036): Verilog HDL or VHDL warning at EX_STAGE.VHD(33): object "OVERFLOW" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 33
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(60): signal "RS_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 60
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(62): signal "DATA_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 62
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(64): signal "DATA_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 64
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(66): signal "RS_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 66
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(75): signal "RT_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 75
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(80): signal "B_INTERMED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 80
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(82): signal "DATA_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 82
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(84): signal "DATA_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 84
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(86): signal "B_INTERMED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 86
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(91): signal "RT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 91
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(93): signal "RD" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 93
+Warning (10492): VHDL Process Statement warning at EX_STAGE.VHD(95): signal "RT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 95
+Info (12128): Elaborating entity "FOWARDING_UNITY" for hierarchy "CPU:MAIN_CPU|EX_STAGE:EX|FOWARDING_UNITY:FU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/EX_STAGE.VHD Line: 52
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(28): signal "REGWRITE_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 28
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(28): signal "REGDST_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 28
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(28): signal "RS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 28
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(35): signal "REGWRITE_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 35
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(35): signal "REGDST_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 35
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(35): signal "RT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 35
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(42): signal "REGWRITE_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 42
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(42): signal "REGDST_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 42
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(42): signal "RS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 42
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(42): signal "REGWRITE_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 42
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(42): signal "REGDST_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 42
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(49): signal "REGWRITE_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 49
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(49): signal "REGDST_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 49
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(49): signal "RT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 49
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(49): signal "REGWRITE_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 49
+Warning (10492): VHDL Process Statement warning at FOWARDING_UNITY.VHD(49): signal "REGDST_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/FOWARDING_UNITY.VHD Line: 49
+Info (12128): Elaborating entity "EXMEM" for hierarchy "CPU:MAIN_CPU|EXMEM:EX_MEM" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 93
+Warning (10492): VHDL Process Statement warning at EXMEM.VHD(23): signal "FLUSH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/EXMEM.VHD Line: 23
+Info (12128): Elaborating entity "MEM_STAGE" for hierarchy "CPU:MAIN_CPU|MEM_STAGE:MEM_ST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 95
+Warning (10541): VHDL Signal Declaration warning at MEM_STAGE.VHD(12): used implicit default value for signal "DATA_FOWARD_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD Line: 12
+Warning (10541): VHDL Signal Declaration warning at MEM_STAGE.VHD(14): used implicit default value for signal "REG_DST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD Line: 14
+Info (12128): Elaborating entity "MEMORY_DATA" for hierarchy "CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/MEM_STAGE.VHD Line: 27
+Info (12128): Elaborating entity "MEMWB" for hierarchy "CPU:MAIN_CPU|MEMWB:MEM_WB" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 97
+Info (12128): Elaborating entity "WB_STAGE" for hierarchy "CPU:MAIN_CPU|WB_STAGE:WB_ST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 98
+Warning (10492): VHDL Process Statement warning at WB_STAGE.VHD(32): signal "MEMORY_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 32
+Warning (10492): VHDL Process Statement warning at WB_STAGE.VHD(34): signal "ULA_RESULT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 34
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|ROM" is uninferred due to inappropriate RAM size File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 19
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG" merged with LATCH primitive "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 22
+Warning (13012): Latch CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST has unsafe behavior File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14] File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 20
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 8
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
+Info (21057): Implemented 772 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 686 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Fri Nov 28 13:18:32 2025
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:29
 
 

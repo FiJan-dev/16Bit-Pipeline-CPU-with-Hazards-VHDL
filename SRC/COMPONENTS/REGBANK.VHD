@@ -25,7 +25,23 @@ ARCHITECTURE LOGICA OF REGBANK is
     end component;
 
     TYPE REG_ARRAY IS ARRAY(0 TO 15) OF DATA_T;
-    SIGNAL REGS_OUT: REG_ARRAY := (OTHERS => (OTHERS => '0'));
+	 
+    -- ==========================
+    -- PRÉ-CARGA DOS REGISTRADORES
+    -- ==========================
+    SIGNAL REGS_OUT: REG_ARRAY := (
+        1  => x"0046",  -- r1  = 70
+        6  => x"0016",  -- r6  = 22
+        10 => x"001E",  -- r10 = 30
+        2  => x"000C",  -- r2  = 12 (teste branch depois)
+        3  => x"0001",  -- r3  = 1  (para dependências rápidas)
+        7  => x"00F0",  -- r7  = 240 (teste de forwarding)
+        15 => x"0008",  -- r15 = 8  (teste jumps, registers altos)
+        OTHERS => (OTHERS => '0')
+    );
+	 
+	 
+	 
     SIGNAL WRITE_ENABLE: DATA_T;
 begin
 
