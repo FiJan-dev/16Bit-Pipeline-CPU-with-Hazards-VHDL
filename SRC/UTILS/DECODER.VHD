@@ -9,4 +9,7 @@ ENTITY DECODER is
         INST_T : IN INST_SIZE;
         INSTRUCTION : IN INST_SIZE;
         RS,
-    )
+    );
+END DECODER;
+
+--nao incluir
