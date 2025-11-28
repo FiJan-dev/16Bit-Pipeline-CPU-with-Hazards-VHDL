@@ -50,14 +50,14 @@ SIGNAL REG_WRITE_WB    : STD_LOGIC := '0';
 SIGNAL REG_WRITE_MEM   : STD_LOGIC := '0';
 	 
 begin
-    DISPLAY_HEX7 : display PORT MAP(,HEX(7)); --teste
-    DISPLAY_HEX6 : display PORT MAP(,HEX(6));
-    DISPLAY_HEX5 : display PORT MAP(,HEX(5));
-    DISPLAY_HEX4 : display PORT MAP(,HEX(4));
-    DISPLAY_HEX3 : display PORT MAP(,HEX(3));
-    DISPLAY_HEX2 : display PORT MAP(,HEX(2));
-    DISPLAY_HEX1 : display PORT MAP(,HEX(1));
-    DISPLAY_HEX0 : display PORT MAP(,HEX(0));
+    --DISPLAY_HEX7 : display PORT MAP(,HEX(7)); --teste
+    --DISPLAY_HEX6 : display PORT MAP(,HEX(6));
+    --DISPLAY_HEX5 : display PORT MAP(,HEX(5));
+    --DISPLAY_HEX4 : display PORT MAP(,HEX(4));
+    --DISPLAY_HEX3 : display PORT MAP(,HEX(3));
+    --DISPLAY_HEX2 : display PORT MAP(,HEX(2));
+    --DISPLAY_HEX1 : display PORT MAP(,HEX(1));
+    --DISPLAY_HEX0 : display PORT MAP(,HEX(0));
     
     IF_ST: IF_STAGE PORT MAP(CLOCK, RESET, PC_BRANCH, PC_JUMP, MUX_PC_SRC, DATA_IF_ID);
     IF_ID: IFID PORT MAP(CLOCK, RESET, DATA_IF_ID, DATA_ID);
