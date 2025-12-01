@@ -107,8 +107,6 @@ PACKAGE CPU_package is
 	 
 	 COMPONENT MEMORY_INST
 		PORT(
-        CLOCK: IN STD_LOGIC;
-        RESET: IN STD_LOGIC;
         ADDRESS: IN DATA_T;
         INSTRUCTION: OUT INST_T
 		);

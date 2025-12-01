@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto3
-Fri Nov 28 13:18:32 2025
+Mon Dec 01 12:46:14 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -20,20 +20,36 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST
- 15. Port Connectivity Checks: "CPU:MAIN_CPU|MEM_STAGE:MEM_ST"
- 16. Port Connectivity Checks: "CPU:MAIN_CPU|EXMEM:EX_MEM"
- 17. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER"
- 18. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX"
- 19. Port Connectivity Checks: "CPU:MAIN_CPU|IDEX:ID_EX"
- 20. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU"
- 21. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|ULA:BRANCH_ADDER"
- 22. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST"
- 23. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER"
- 24. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST"
- 25. Port Connectivity Checks: "CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 15. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i
+ 16. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i
+ 17. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i
+ 18. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i
+ 19. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:4:REG_i
+ 20. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:5:REG_i
+ 21. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i
+ 22. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i
+ 23. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:8:REG_i
+ 24. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:9:REG_i
+ 25. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i
+ 26. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:11:REG_i
+ 27. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:12:REG_i
+ 28. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:13:REG_i
+ 29. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:14:REG_i
+ 30. Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i
+ 31. Port Connectivity Checks: "CPU:MAIN_CPU|MEM_STAGE:MEM_ST"
+ 32. Port Connectivity Checks: "CPU:MAIN_CPU|EXMEM:EX_MEM"
+ 33. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER"
+ 34. Port Connectivity Checks: "CPU:MAIN_CPU|EX_STAGE:EX"
+ 35. Port Connectivity Checks: "CPU:MAIN_CPU|IDEX:ID_EX"
+ 36. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU"
+ 37. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST|ULA:BRANCH_ADDER"
+ 38. Port Connectivity Checks: "CPU:MAIN_CPU|ID_STAGE:ID_ST"
+ 39. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER"
+ 40. Port Connectivity Checks: "CPU:MAIN_CPU|IF_STAGE:IF_ST"
+ 41. Port Connectivity Checks: "CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -60,15 +76,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 28 13:18:32 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 01 12:46:14 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto3                                    ;
 ; Top-level Entity Name              ; CPUTOP                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 672                                         ;
-;     Total combinational functions  ; 410                                         ;
-;     Dedicated logic registers      ; 385                                         ;
-; Total registers                    ; 385                                         ;
+; Total logic elements               ; 474                                         ;
+;     Total combinational functions  ; 298                                         ;
+;     Dedicated logic registers      ; 244                                         ;
+; Total registers                    ; 244                                         ;
 ; Total pins                         ; 86                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -214,36 +230,36 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 672          ;
-;                                             ;              ;
-; Total combinational functions               ; 410          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 294          ;
-;     -- 3 input functions                    ; 28           ;
-;     -- <=2 input functions                  ; 88           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 410          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 385          ;
-;     -- Dedicated logic registers            ; 385          ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 86           ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[3]~input ;
-; Maximum fan-out                             ; 386          ;
-; Total fan-out                               ; 2697         ;
-; Average fan-out                             ; 2.79         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 474   ;
+;                                             ;       ;
+; Total combinational functions               ; 298   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 230   ;
+;     -- 3 input functions                    ; 39    ;
+;     -- <=2 input functions                  ; 29    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 298   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 244   ;
+;     -- Dedicated logic registers            ; 244   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 86    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; CLOCK ;
+; Maximum fan-out                             ; 241   ;
+; Total fan-out                               ; 1970  ;
+; Average fan-out                             ; 2.76  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -251,8 +267,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name   ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
-; |CPUTOP                               ; 410 (0)             ; 385 (0)                   ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |CPUTOP                                                                          ; CPUTOP        ; work         ;
-;    |CPU:MAIN_CPU|                     ; 410 (0)             ; 385 (8)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU                                                             ; CPU           ; work         ;
+; |CPUTOP                               ; 298 (1)             ; 244 (4)                   ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |CPUTOP                                                                          ; CPUTOP        ; work         ;
+;    |CPU:MAIN_CPU|                     ; 297 (0)             ; 240 (8)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU                                                             ; CPU           ; work         ;
 ;       |DISPLAY:DISPLAY_HEX0|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX0                                        ; DISPLAY       ; work         ;
 ;       |DISPLAY:DISPLAY_HEX1|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX1                                        ; DISPLAY       ; work         ;
 ;       |DISPLAY:DISPLAY_HEX2|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX2                                        ; DISPLAY       ; work         ;
@@ -261,37 +277,34 @@ https://fpgasoftware.intel.com/eula.
 ;       |DISPLAY:DISPLAY_HEX5|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5                                        ; DISPLAY       ; work         ;
 ;       |DISPLAY:DISPLAY_HEX6|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX6                                        ; DISPLAY       ; work         ;
 ;       |DISPLAY:DISPLAY_HEX7|          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX7                                        ; DISPLAY       ; work         ;
-;       |EXMEM:EX_MEM|                  ; 0 (0)               ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EXMEM:EX_MEM                                                ; EXMEM         ; work         ;
-;       |EX_STAGE:EX|                   ; 21 (4)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX                                                 ; EX_STAGE      ; work         ;
-;          |ULA:ULA_ADDER|              ; 17 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER                                   ; ULA           ; work         ;
+;       |EXMEM:EX_MEM|                  ; 0 (0)               ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EXMEM:EX_MEM                                                ; EXMEM         ; work         ;
+;       |EX_STAGE:EX|                   ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX                                                 ; EX_STAGE      ; work         ;
+;          |ULA:ULA_ADDER|              ; 11 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER                                   ; ULA           ; work         ;
 ;             |ADDER:\ADDERS:0:ADDER_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:0:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:1:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:2:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:2:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:3:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:3:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:4:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:5:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:5:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:6:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:6:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:7:ADDER_i           ; ADDER         ; work         ;
-;       |IDEX:ID_EX|                    ; 1 (1)               ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX                                                  ; IDEX          ; work         ;
-;       |ID_STAGE:ID_ST|                ; 21 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST                                              ; ID_STAGE      ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:4:ADDER_i           ; ADDER         ; work         ;
+;       |IDEX:ID_EX|                    ; 3 (3)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX                                                  ; IDEX          ; work         ;
+;       |ID_STAGE:ID_ST|                ; 23 (0)              ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST                                              ; ID_STAGE      ; work         ;
 ;          |CONTROL_UNITY:CU|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU                             ; CONTROL_UNITY ; work         ;
-;          |REGBANK:REGBANK_INST|       ; 18 (18)             ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST                         ; REGBANK       ; work         ;
-;             |REG16:\GEN_REGS:0:REG_i| ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ; REG16         ; work         ;
+;          |REGBANK:REGBANK_INST|       ; 20 (20)             ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST                         ; REGBANK       ; work         ;
+;             |REG16:\GEN_REGS:0:REG_i| ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ; REG16         ; work         ;
 ;       |IFID:IF_ID|                    ; 0 (0)               ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IFID:IF_ID                                                  ; IFID          ; work         ;
-;       |IF_STAGE:IF_ST|                ; 39 (1)              ; 23 (8)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST                                              ; IF_STAGE      ; work         ;
-;          |MEMORY_INST:MEM_INST|       ; 29 (29)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST                         ; MEMORY_INST   ; work         ;
+;       |IF_STAGE:IF_ST|                ; 32 (1)              ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST                                              ; IF_STAGE      ; work         ;
+;          |MEMORY_INST:MEM_INST|       ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST                         ; MEMORY_INST   ; work         ;
 ;          |ULA:PC_ADDER|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER                                 ; ULA           ; work         ;
-;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:1:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:1:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:1:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:2:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:2:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:3:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:3:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:4:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:3:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:3:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:4:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:5:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:5:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:6:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:6:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:6:ADDER_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:6:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:7:ADDER_i         ; ADDER         ; work         ;
-;       |MEMWB:MEM_WB|                  ; 0 (0)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB                                                ; MEMWB         ; work         ;
-;       |MEM_STAGE:MEM_ST|              ; 263 (0)             ; 256 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST                                            ; MEM_STAGE     ; work         ;
-;          |MEMORY_DATA:MEM|            ; 263 (263)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM                            ; MEMORY_DATA   ; work         ;
-;       |WB_STAGE:WB_ST|                ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|WB_STAGE:WB_ST                                              ; WB_STAGE      ; work         ;
+;       |MEMWB:MEM_WB|                  ; 0 (0)               ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB                                                ; MEMWB         ; work         ;
+;       |MEM_STAGE:MEM_ST|              ; 166 (0)             ; 160 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST                                            ; MEM_STAGE     ; work         ;
+;          |MEMORY_DATA:MEM|            ; 166 (166)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM                            ; MEMORY_DATA   ; work         ;
+;       |WB_STAGE:WB_ST|                ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPUTOP|CPU:MAIN_CPU|WB_STAGE:WB_ST                                              ; WB_STAGE      ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -301,49 +314,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+----------------------------------------------------+------------------------+
 ; Latch Name                                           ; Latch Enable Signal                                ; Free of Timing Hazards ;
 +------------------------------------------------------+----------------------------------------------------+------------------------+
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST  ; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10 ; yes                    ;
 ; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG ; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10 ; yes                    ;
-; Number of user-specified and inferred latches = 2    ;                                                    ;                        ;
+; Number of user-specified and inferred latches = 1    ;                                                    ;                        ;
 +------------------------------------------------------+----------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                ;
-+-------------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                       ; Reason for Removal                          ;
-+-------------------------------------------------------------------------------------+---------------------------------------------+
-; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[8..11]                                             ; Lost fanout                                 ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:14:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:13:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:12:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:11:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i|reg[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:9:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:8:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:5:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:4:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i|reg[0..7]  ; Stuck at GND due to stuck port clock_enable ;
-; CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[4]                     ; Stuck at GND due to stuck port data_in      ;
-; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4]                                                 ; Stuck at GND due to stuck port data_in      ;
-; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3]                                                 ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 127                                             ;                                             ;
-+-------------------------------------------------------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                  ;
++---------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                         ; Reason for Removal                          ;
++---------------------------------------------------------------------------------------+---------------------------------------------+
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[8..11]                                               ; Lost fanout                                 ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[3]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[3]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[2]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[2]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[1]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[1]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[0]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[0]                                                 ; Lost fanout                                 ;
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[4..7,65]                                             ; Lost fanout                                 ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i|reg_q[4]    ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i|reg_q[3]    ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i|reg_q[0..2] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:14:REG_i|reg_q[0..4] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:13:REG_i|reg_q[0..4] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:12:REG_i|reg_q[0..4] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:11:REG_i|reg_q[0..4] ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i|reg_q[1..4] ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i|reg_q[0]    ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:9:REG_i|reg_q[0..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:8:REG_i|reg_q[0..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i|reg_q[4]     ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i|reg_q[0..3]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i|reg_q[3,4]   ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i|reg_q[2]     ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i|reg_q[0,1]   ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:5:REG_i|reg_q[0..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:4:REG_i|reg_q[0..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i|reg_q[1..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i|reg_q[0]     ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i|reg_q[4]     ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i|reg_q[2,3]   ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i|reg_q[0,1]   ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i|reg_q[2..4]  ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i|reg_q[1]     ; Stuck at VCC due to stuck port clock_enable ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i|reg_q[0]     ; Stuck at GND due to stuck port clock_enable ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4]                                                   ; Stuck at GND due to stuck port data_in      ;
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3]                                                   ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 94                                                ;                                             ;
++---------------------------------------------------------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                            ;
-+-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
-; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register                                   ;
-+-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
-; CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[4] ; Stuck at GND              ; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3] ;
-;                                                                 ; due to stuck port data_in ;                                                                          ;
-+-----------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                      ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[3] ; Lost Fanouts              ; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[3], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[65], ;
+;                                       ;                           ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[7]                                          ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[2] ; Lost Fanouts              ; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[2], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[6]   ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[1] ; Lost Fanouts              ; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[1], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[5]   ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[0] ; Lost Fanouts              ; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[0], CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[4]   ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[4]   ; Stuck at GND              ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[3]                                          ;
+;                                       ; due to stuck port data_in ;                                                                              ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -351,12 +387,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 385   ;
-; Number of registers using Synchronous Clear  ; 15    ;
+; Total registers                              ; 244   ;
+; Number of registers using Synchronous Clear  ; 6     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 114   ;
+; Number of registers using Asynchronous Clear ; 80    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 261   ;
+; Number of registers using Clock Enable       ; 159   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -366,51 +402,40 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------------------+---------+
 ; Inverted Register                                        ; Fan out ;
 +----------------------------------------------------------+---------+
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][0]  ; 2       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][1] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1] ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][0] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][0]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]  ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][0] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][0] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][1] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][1]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][1]  ; 2       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][1] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][1]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][1] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][1]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][2] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][2] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][2]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][2]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][2]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][2]  ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]  ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][2]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][2] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][2] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][2] ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][3]  ; 2       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][3] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]  ; 1       ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][3]  ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][3]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]  ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3] ; 1       ;
 ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][4] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][4]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][4]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][5]  ; 2       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][5] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][5]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][5] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][6]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][6]  ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][6] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][6] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7] ; 1       ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][7] ; 1       ;
-; Total number of inverted registers = 44                  ;         ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][4] ; 2       ;
+; Total number of inverted registers = 33                  ;         ;
 +----------------------------------------------------------+---------+
 
 
@@ -419,50 +444,51 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][6]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][0]  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][6]  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][0]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][7]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][3]  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][1]  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][5]  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][6] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][6] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][0] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3] ;
-; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[25]                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][6]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][4]  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][4]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][3]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][2]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][2]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][2]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][1] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][3] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][1] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][1] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3] ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[46]                     ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; Yes        ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[29]                     ;
+; 33:1               ; 5 bits    ; 110 LEs       ; 110 LEs              ; 0 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[20]                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][3]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -473,6 +499,166 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+-------+-------------------------------------------------+
 ; ADDR_SIZE      ; 8     ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000010 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000001100 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000001 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:4:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:5:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000100 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000011110000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:8:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:9:REG_i ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                              ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                   ;
++----------------+------------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000011110 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:11:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:12:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:13:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:14:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000000000 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value            ; Type                                                                               ;
++----------------+------------------+------------------------------------------------------------------------------------+
+; init           ; 0000000000001000 ; Unsigned Binary                                                                    ;
++----------------+------------------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -584,7 +770,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+------------------------------------+
 ; Port  ; Type  ; Severity ; Details                            ;
 +-------+-------+----------+------------------------------------+
-; sw[3] ; Input ; Info     ; Stuck at VCC                       ;
+; sw[3] ; Input ; Info     ; Stuck at GND                       ;
 +-------+-------+----------+------------------------------------+
 
 
@@ -594,22 +780,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 86                          ;
-; cycloneiii_ff         ; 385                         ;
-;     CLR               ; 106                         ;
-;     ENA               ; 253                         ;
-;     ENA CLR           ; 8                           ;
-;     SCLR              ; 15                          ;
-;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 420                         ;
-;     normal            ; 420                         ;
+; cycloneiii_ff         ; 244                         ;
+;     CLR               ; 70                          ;
+;     CLR SCLR          ; 5                           ;
+;     ENA               ; 154                         ;
+;     ENA CLR           ; 5                           ;
+;     SCLR              ; 1                           ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 307                         ;
+;     normal            ; 307                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 52                          ;
-;         2 data inputs ; 45                          ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 294                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 230                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.18                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -628,7 +815,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 28 13:18:09 2025
+    Info: Processing started: Mon Dec 01 12:45:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto3 -c Projeto3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -677,10 +864,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: REGBANK-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 18
     Info (12023): Found entity 1: REGBANK File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/reg16.vhd
-    Info (12022): Found design unit 1: REG16-LOGIC File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd Line: 11
+    Info (12022): Found design unit 1: REG16-RTL File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd Line: 16
     Info (12023): Found entity 1: REG16 File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REG16.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/memory_inst.vhd
-    Info (12022): Found design unit 1: MEMORY_INST-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 15
+    Info (12022): Found design unit 1: MEMORY_INST-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 13
     Info (12023): Found entity 1: MEMORY_INST File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/20098315/downloads/16bit-pipeline-cpu-with-hazards-vhdl/src/components/memory_data.vhd
     Info (12022): Found design unit 1: MEMORY_DATA-LOGICA File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_DATA.VHD Line: 22
@@ -710,7 +897,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: CPU_TOP_tb-sim File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/CPU_TOP_tb.vhd Line: 9
     Info (12023): Found entity 1: CPU_TOP_tb File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/CPU_TOP_tb.vhd Line: 6
 Info (12127): Elaborating entity "CPUTOP" for the top level hierarchy
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:MAIN_CPU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 34
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:MAIN_CPU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 48
 Warning (10540): VHDL Signal Declaration warning at CPU.VHD(27): used explicit default value for signal "PC_BRANCH" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 27
 Warning (10540): VHDL Signal Declaration warning at CPU.VHD(28): used explicit default value for signal "PC_JUMP" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 28
 Warning (10540): VHDL Signal Declaration warning at CPU.VHD(33): used explicit default value for signal "MUX_PC_SRC" because signal was never assigned a value File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPU.VHD Line: 33
@@ -732,7 +919,14 @@ Warning (10036): Verilog HDL or VHDL warning at ID_STAGE.VHD(37): object "CARRY"
 Warning (10036): Verilog HDL or VHDL warning at ID_STAGE.VHD(37): object "OVERFLOW" assigned a value but never read File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 37
 Info (12128): Elaborating entity "comparator" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|comparator:COMPARATOR_COMPONENT" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 48
 Info (12128): Elaborating entity "REGBANK" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 49
-Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 76
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:1:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:2:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:3:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:6:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:7:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:10:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
+Info (12128): Elaborating entity "REG16" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:15:REG_i" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/REGBANK.VHD Line: 80
 Info (12128): Elaborating entity "SIGN_EXT" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|SIGN_EXT:SIGN_EXT_INST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 51
 Info (12128): Elaborating entity "SHIFT_LEFT_2" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|SHIFT_LEFT_2:SLL2" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 52
 Info (12128): Elaborating entity "CONTROL_UNITY" for hierarchy "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/ID_STAGE.VHD Line: 53
@@ -795,11 +989,9 @@ Info (12128): Elaborating entity "WB_STAGE" for hierarchy "CPU:MAIN_CPU|WB_STAGE
 Warning (10492): VHDL Process Statement warning at WB_STAGE.VHD(32): signal "MEMORY_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 32
 Warning (10492): VHDL Process Statement warning at WB_STAGE.VHD(34): signal "ULA_RESULT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/PIPELINE/WB_STAGE.VHD Line: 34
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|ROM" is uninferred due to inappropriate RAM size File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 19
+    Info (276004): RAM logic "CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|ROM" is uninferred due to inappropriate RAM size File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/MEMORY_INST.VHD Line: 17
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG" merged with LATCH primitive "CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 22
-Warning (13012): Latch CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST has unsafe behavior File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 16
+Warning (13012): Latch CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG has unsafe behavior File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CONTROL_UNITY.VHD Line: 22
     Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14] File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 20
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
@@ -809,11 +1001,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
     Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 20 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 8
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 9
@@ -833,14 +1024,14 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 10
-Info (21057): Implemented 772 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 571 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 686 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Fri Nov 28 13:18:32 2025
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 485 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Mon Dec 01 12:46:14 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:28
 
 

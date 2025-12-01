@@ -1,25 +1,31 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-use work.CPU_package.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use work.CPU_package.all;  -- DATA_T
 
-ENTITY REG16 IS PORT(
-	rst, clock, enable: IN STD_LOGIC;				--Sinais de Controle
-	d: IN DATA_T;	--Data-In
-	q: OUT DATA_T);	--Register Data
-END REG16;
+entity REG16 is
+    generic (
+        INIT : DATA_T := (others => '0')  -- valor de pré-carga
+    );
+    port (
+        rst, clock, enable: in std_logic;
+        d: in DATA_T;
+        q: out DATA_T
+    );
+end entity;
 
-ARCHITECTURE LOGIC OF REG16 IS
-	SIGNAL reg: DATA_T;
-BEGIN
-	PROCESS (rst, clock)
-	BEGIN
-		if rst='1' then
-			reg <= (others=>'0');
-		elsif rising_edge(clock) then
-			if enable='1' then
-				reg <= d;
-			end if;
-		end if;
-	END PROCESS;
-	q <= reg;
-END LOGIC;
+architecture RTL of REG16 is
+    signal reg_q : DATA_T := INIT;  
+begin
+    process(clock, rst)
+    begin
+        if rst = '1' then
+            reg_q <= INIT;              
+        elsif rising_edge(clock) then
+            if enable = '1' then
+                reg_q <= d;
+            end if;
+        end if;
+    end process;
+
+    q <= reg_q;
+end architecture;

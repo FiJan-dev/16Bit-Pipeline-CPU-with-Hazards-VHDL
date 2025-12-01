@@ -1,5 +1,5 @@
 Fitter report for Projeto3
-Fri Nov 28 13:18:52 2025
+Mon Dec 01 12:46:26 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -27,21 +27,22 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  19. Delay Chain Summary
  20. Pad To Core Delay Chain Fanout
  21. Control Signals
- 22. Routing Usage Summary
- 23. LAB Logic Elements
- 24. LAB-wide Signals
- 25. LAB Signals Sourced
- 26. LAB Signals Sourced Out
- 27. LAB Distinct Inputs
- 28. I/O Rules Summary
- 29. I/O Rules Details
- 30. I/O Rules Matrix
- 31. Fitter Device Options
- 32. Operating Settings and Conditions
- 33. Estimated Delay Added for Hold Timing Summary
- 34. Estimated Delay Added for Hold Timing Details
- 35. Fitter Messages
- 36. Fitter Suppressed Messages
+ 22. Global & Other Fast Signals
+ 23. Routing Usage Summary
+ 24. LAB Logic Elements
+ 25. LAB-wide Signals
+ 26. LAB Signals Sourced
+ 27. LAB Signals Sourced Out
+ 28. LAB Distinct Inputs
+ 29. I/O Rules Summary
+ 30. I/O Rules Details
+ 31. I/O Rules Matrix
+ 32. Fitter Device Options
+ 33. Operating Settings and Conditions
+ 34. Estimated Delay Added for Hold Timing Summary
+ 35. Estimated Delay Added for Hold Timing Details
+ 36. Fitter Messages
+ 37. Fitter Suppressed Messages
 
 
 
@@ -68,17 +69,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 28 13:18:52 2025       ;
+; Fitter Status                      ; Successful - Mon Dec 01 12:46:26 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Projeto3                                    ;
 ; Top-level Entity Name              ; CPUTOP                                      ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 541 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 410 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 385 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 385                                         ;
+; Total logic elements               ; 413 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 298 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 244 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 244                                         ;
 ; Total pins                         ; 86 / 529 ( 16 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -155,19 +156,19 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
-;     Processor 4            ;   0.4%      ;
-;     Processor 5            ;   0.4%      ;
-;     Processor 6            ;   0.4%      ;
-;     Processor 7            ;   0.4%      ;
-;     Processor 8            ;   0.4%      ;
-;     Processors 9-12        ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.5%      ;
+;     Processor 5            ;   0.5%      ;
+;     Processor 6            ;   0.5%      ;
+;     Processor 7            ;   0.5%      ;
+;     Processor 8            ;   0.5%      ;
+;     Processors 9-12        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -506,8 +507,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 978 ) ; 0.00 % ( 0 / 978 )         ; 0.00 % ( 0 / 978 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 978 ) ; 0.00 % ( 0 / 978 )         ; 0.00 % ( 0 / 978 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 727 ) ; 0.00 % ( 0 / 727 )         ; 0.00 % ( 0 / 727 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 727 ) ; 0.00 % ( 0 / 727 )         ; 0.00 % ( 0 / 727 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -530,7 +531,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 968 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 717 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -546,26 +547,26 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 541 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 156                     ;
-;     -- Register only                        ; 131                     ;
-;     -- Combinational with a register        ; 254                     ;
+; Total logic elements                        ; 413 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 169                     ;
+;     -- Register only                        ; 115                     ;
+;     -- Combinational with a register        ; 129                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 294                     ;
-;     -- 3 input functions                    ; 28                      ;
-;     -- <=2 input functions                  ; 88                      ;
-;     -- Register only                        ; 131                     ;
+;     -- 4 input functions                    ; 230                     ;
+;     -- 3 input functions                    ; 39                      ;
+;     -- <=2 input functions                  ; 29                      ;
+;     -- Register only                        ; 115                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 410                     ;
+;     -- normal mode                          ; 298                     ;
 ;     -- arithmetic mode                      ; 0                       ;
 ;                                             ;                         ;
-; Total registers*                            ; 385 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 385 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 244 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 244 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 46 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 40 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 86 / 529 ( 16 % )       ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -576,19 +577,19 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 ; Total block memory implementation bits      ; 0 / 3,981,312 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )         ;
 ; PLLs                                        ; 0 / 4 ( 0 % )           ;
-; Global signals                              ; 0                       ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )          ;
+; Global signals                              ; 2                       ;
+;     -- Global clocks                        ; 2 / 20 ( 10 % )         ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.4%      ;
-; Peak interconnect usage (total/H/V)         ; 8.7% / 7.3% / 11.0%     ;
-; Maximum fan-out                             ; 386                     ;
-; Highest non-global fan-out                  ; 386                     ;
-; Total fan-out                               ; 2833                    ;
-; Average fan-out                             ; 2.56                    ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%      ;
+; Peak interconnect usage (total/H/V)         ; 3.6% / 3.3% / 4.0%      ;
+; Maximum fan-out                             ; 238                     ;
+; Highest non-global fan-out                  ; 128                     ;
+; Total fan-out                               ; 2090                    ;
+; Average fan-out                             ; 2.49                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -601,32 +602,33 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 541 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 156                    ; 0                              ;
-;     -- Register only                        ; 131                    ; 0                              ;
-;     -- Combinational with a register        ; 254                    ; 0                              ;
+; Total logic elements                        ; 413 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 169                    ; 0                              ;
+;     -- Register only                        ; 115                    ; 0                              ;
+;     -- Combinational with a register        ; 129                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 294                    ; 0                              ;
-;     -- 3 input functions                    ; 28                     ; 0                              ;
-;     -- <=2 input functions                  ; 88                     ; 0                              ;
-;     -- Register only                        ; 131                    ; 0                              ;
+;     -- 4 input functions                    ; 230                    ; 0                              ;
+;     -- 3 input functions                    ; 39                     ; 0                              ;
+;     -- <=2 input functions                  ; 29                     ; 0                              ;
+;     -- Register only                        ; 115                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 410                    ; 0                              ;
+;     -- normal mode                          ; 298                    ; 0                              ;
 ;     -- arithmetic mode                      ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 385                    ; 0                              ;
-;     -- Dedicated logic registers            ; 385 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 244                    ; 0                              ;
+;     -- Dedicated logic registers            ; 244 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 46 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 40 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 86                     ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )        ; 0 / 532 ( 0 % )                ;
 ; Total memory bits                           ; 0                      ; 0                              ;
 ; Total RAM block bits                        ; 0                      ; 0                              ;
+; Clock control block                         ; 2 / 24 ( 8 % )         ; 0 / 24 ( 0 % )                 ;
 ;                                             ;                        ;                                ;
 ; Connections                                 ;                        ;                                ;
 ;     -- Input Connections                    ; 0                      ; 0                              ;
@@ -635,8 +637,8 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 2828                   ; 5                              ;
-;     -- Registered Connections               ; 1091                   ; 0                              ;
+;     -- Total Connections                    ; 2085                   ; 5                              ;
+;     -- Registered Connections               ; 901                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 0                              ;
@@ -668,11 +670,11 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; CLOCK_50 ; Y2    ; 2        ; 0            ; 36           ; 14           ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[0]   ; M23   ; 6        ; 115          ; 40           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[1]   ; M21   ; 6        ; 115          ; 53           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[2]   ; N21   ; 6        ; 115          ; 42           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; KEY[3]   ; R24   ; 5        ; 115          ; 35           ; 21           ; 386                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; KEY[3]   ; R24   ; 5        ; 115          ; 35           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB28  ; 5        ; 115          ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[10]   ; AC24  ; 5        ; 115          ; 4            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[11]   ; AB24  ; 5        ; 115          ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
@@ -680,7 +682,7 @@ The pin-out file can be found in C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-
 ; SW[13]   ; AA24  ; 5        ; 115          ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[14]   ; AA23  ; 5        ; 115          ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[15]   ; AA22  ; 5        ; 115          ; 6            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[16]   ; Y24   ; 5        ; 115          ; 13           ; 0            ; 173                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[16]   ; Y24   ; 5        ; 115          ; 13           ; 0            ; 128                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[1]    ; AC28  ; 5        ; 115          ; 14           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[2]    ; AC27  ; 5        ; 115          ; 15           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[3]    ; AD27  ; 5        ; 115          ; 13           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
@@ -1596,7 +1598,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+-------------------------------+
 ; Pin Name ; Reason                        ;
 +----------+-------------------------------+
-; CLOCK_50 ; Incomplete set of assignments ;
 ; SW[0]    ; Incomplete set of assignments ;
 ; SW[1]    ; Incomplete set of assignments ;
 ; SW[2]    ; Incomplete set of assignments ;
@@ -1681,6 +1682,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; HEX0[1]  ; Incomplete set of assignments ;
 ; HEX0[0]  ; Incomplete set of assignments ;
 ; SW[16]   ; Incomplete set of assignments ;
+; CLOCK_50 ; Incomplete set of assignments ;
 ; KEY[3]   ; Incomplete set of assignments ;
 +----------+-------------------------------+
 
@@ -1690,47 +1692,44 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                              ; Entity Name   ; Library Name ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------+---------------+--------------+
-; |CPUTOP                               ; 541 (0)     ; 385 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 86   ; 0            ; 156 (0)      ; 131 (0)           ; 254 (0)          ; |CPUTOP                                                                          ; CPUTOP        ; work         ;
-;    |CPU:MAIN_CPU|                     ; 541 (8)     ; 385 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 156 (0)      ; 131 (2)           ; 254 (0)          ; |CPUTOP|CPU:MAIN_CPU                                                             ; CPU           ; work         ;
+; |CPUTOP                               ; 413 (4)     ; 244 (4)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 86   ; 0            ; 169 (0)      ; 115 (3)           ; 129 (1)          ; |CPUTOP                                                                          ; CPUTOP        ; work         ;
+;    |CPU:MAIN_CPU|                     ; 409 (8)     ; 240 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 169 (0)      ; 112 (3)           ; 128 (0)          ; |CPUTOP|CPU:MAIN_CPU                                                             ; CPU           ; work         ;
 ;       |DISPLAY:DISPLAY_HEX0|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX0                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX1|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX1                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX2|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX2                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX3|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX3                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX1|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX1                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX2|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX2                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX3|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX3                                        ; DISPLAY       ; work         ;
 ;       |DISPLAY:DISPLAY_HEX4|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX4                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX5|          ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX6|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX6                                        ; DISPLAY       ; work         ;
-;       |DISPLAY:DISPLAY_HEX7|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX7                                        ; DISPLAY       ; work         ;
-;       |EXMEM:EX_MEM|                  ; 24 (24)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 19 (19)          ; |CPUTOP|CPU:MAIN_CPU|EXMEM:EX_MEM                                                ; EXMEM         ; work         ;
-;       |EX_STAGE:EX|                   ; 21 (4)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (1)        ; 0 (0)             ; 14 (3)           ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX                                                 ; EX_STAGE      ; work         ;
-;          |ULA:ULA_ADDER|              ; 17 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 11 (1)           ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER                                   ; ULA           ; work         ;
-;             |ADDER:\ADDERS:0:ADDER_i| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:0:ADDER_i           ; ADDER         ; work         ;
+;       |DISPLAY:DISPLAY_HEX5|          ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 2 (2)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX5                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX6|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX6                                        ; DISPLAY       ; work         ;
+;       |DISPLAY:DISPLAY_HEX7|          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; |CPUTOP|CPU:MAIN_CPU|DISPLAY:DISPLAY_HEX7                                        ; DISPLAY       ; work         ;
+;       |EXMEM:EX_MEM|                  ; 14 (14)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 8 (8)            ; |CPUTOP|CPU:MAIN_CPU|EXMEM:EX_MEM                                                ; EXMEM         ; work         ;
+;       |EX_STAGE:EX|                   ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 7 (0)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX                                                 ; EX_STAGE      ; work         ;
+;          |ULA:ULA_ADDER|              ; 11 (1)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 7 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER                                   ; ULA           ; work         ;
+;             |ADDER:\ADDERS:0:ADDER_i| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:0:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:1:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:2:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:2:ADDER_i           ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:3:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:3:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:4:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:5:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:5:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:6:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:6:ADDER_i           ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:7:ADDER_i           ; ADDER         ; work         ;
-;       |IDEX:ID_EX|                    ; 29 (29)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 10 (10)           ; 19 (19)          ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX                                                  ; IDEX          ; work         ;
-;       |ID_STAGE:ID_ST|                ; 29 (0)      ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 4 (0)             ; 22 (0)           ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST                                              ; ID_STAGE      ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|EX_STAGE:EX|ULA:ULA_ADDER|ADDER:\ADDERS:4:ADDER_i           ; ADDER         ; work         ;
+;       |IDEX:ID_EX|                    ; 21 (21)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 6 (6)             ; 12 (12)          ; |CPUTOP|CPU:MAIN_CPU|IDEX:ID_EX                                                  ; IDEX          ; work         ;
+;       |ID_STAGE:ID_ST|                ; 28 (0)      ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 15 (0)           ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST                                              ; ID_STAGE      ; work         ;
 ;          |CONTROL_UNITY:CU|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU                             ; CONTROL_UNITY ; work         ;
-;          |REGBANK:REGBANK_INST|       ; 26 (18)     ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 22 (18)          ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST                         ; REGBANK       ; work         ;
-;             |REG16:\GEN_REGS:0:REG_i| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ; REG16         ; work         ;
-;       |IFID:IF_ID|                    ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 10 (10)           ; 5 (5)            ; |CPUTOP|CPU:MAIN_CPU|IFID:IF_ID                                                  ; IFID          ; work         ;
-;       |IF_STAGE:IF_ST|                ; 39 (8)      ; 23 (8)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 24 (1)           ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST                                              ; IF_STAGE      ; work         ;
-;          |MEMORY_INST:MEM_INST|       ; 29 (29)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 15 (15)          ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST                         ; MEMORY_INST   ; work         ;
+;          |REGBANK:REGBANK_INST|       ; 25 (20)     ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 15 (10)          ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST                         ; REGBANK       ; work         ;
+;             |REG16:\GEN_REGS:0:REG_i| ; 5 (5)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |CPUTOP|CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i ; REG16         ; work         ;
+;       |IFID:IF_ID|                    ; 15 (15)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 15 (15)          ; |CPUTOP|CPU:MAIN_CPU|IFID:IF_ID                                                  ; IFID          ; work         ;
+;       |IF_STAGE:IF_ST|                ; 32 (8)      ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 24 (1)           ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST                                              ; IF_STAGE      ; work         ;
+;          |MEMORY_INST:MEM_INST|       ; 22 (22)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 15 (15)          ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST                         ; MEMORY_INST   ; work         ;
 ;          |ULA:PC_ADDER|               ; 9 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 8 (0)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER                                 ; ULA           ; work         ;
-;             |ADDER:\ADDERS:1:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:1:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:1:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:1:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:2:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:2:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:3:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:3:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:4:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:4:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:3:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:3:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:4:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:4:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:5:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:5:ADDER_i         ; ADDER         ; work         ;
-;             |ADDER:\ADDERS:6:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:6:ADDER_i         ; ADDER         ; work         ;
+;             |ADDER:\ADDERS:6:ADDER_i| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:6:ADDER_i         ; ADDER         ; work         ;
 ;             |ADDER:\ADDERS:7:ADDER_i| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |CPUTOP|CPU:MAIN_CPU|IF_STAGE:IF_ST|ULA:PC_ADDER|ADDER:\ADDERS:7:ADDER_i         ; ADDER         ; work         ;
-;       |MEMWB:MEM_WB|                  ; 22 (22)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 17 (17)          ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB                                                ; MEMWB         ; work         ;
-;       |MEM_STAGE:MEM_ST|              ; 360 (0)     ; 256 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 92 (0)       ; 95 (0)            ; 173 (0)          ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST                                            ; MEM_STAGE     ; work         ;
-;          |MEMORY_DATA:MEM|            ; 360 (360)   ; 256 (256)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 92 (92)      ; 95 (95)           ; 173 (173)        ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM                            ; MEMORY_DATA   ; work         ;
-;       |WB_STAGE:WB_ST|                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 7 (7)            ; |CPUTOP|CPU:MAIN_CPU|WB_STAGE:WB_ST                                              ; WB_STAGE      ; work         ;
+;       |MEMWB:MEM_WB|                  ; 12 (12)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 7 (7)            ; |CPUTOP|CPU:MAIN_CPU|MEMWB:MEM_WB                                                ; MEMWB         ; work         ;
+;       |MEM_STAGE:MEM_ST|              ; 259 (0)     ; 160 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 89 (0)       ; 92 (0)            ; 78 (0)           ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST                                            ; MEM_STAGE     ; work         ;
+;          |MEMORY_DATA:MEM|            ; 259 (259)   ; 160 (160)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 89 (89)      ; 92 (92)           ; 78 (78)          ; |CPUTOP|CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM                            ; MEMORY_DATA   ; work         ;
+;       |WB_STAGE:WB_ST|                ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; |CPUTOP|CPU:MAIN_CPU|WB_STAGE:WB_ST                                              ; WB_STAGE      ; work         ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1740,7 +1739,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name     ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
-; CLOCK_50 ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[0]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[1]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[2]    ; Input    ; --            ; --            ; --                    ; --  ; --   ;
@@ -1825,597 +1823,168 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX0[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[16]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; KEY[3]   ; Input    ; (0) 0 ps      ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; CLOCK_50 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; KEY[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                                       ;
-+----------------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                                    ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------------------------------------+-------------------+---------+
-; CLOCK_50                                                                               ;                   ;         ;
-; SW[0]                                                                                  ;                   ;         ;
-; SW[1]                                                                                  ;                   ;         ;
-; SW[2]                                                                                  ;                   ;         ;
-; SW[3]                                                                                  ;                   ;         ;
-; SW[4]                                                                                  ;                   ;         ;
-; SW[5]                                                                                  ;                   ;         ;
-; SW[6]                                                                                  ;                   ;         ;
-; SW[7]                                                                                  ;                   ;         ;
-; SW[8]                                                                                  ;                   ;         ;
-; SW[9]                                                                                  ;                   ;         ;
-; SW[10]                                                                                 ;                   ;         ;
-; SW[11]                                                                                 ;                   ;         ;
-; SW[12]                                                                                 ;                   ;         ;
-; SW[13]                                                                                 ;                   ;         ;
-; SW[14]                                                                                 ;                   ;         ;
-; SW[15]                                                                                 ;                   ;         ;
-; KEY[0]                                                                                 ;                   ;         ;
-; KEY[1]                                                                                 ;                   ;         ;
-; KEY[2]                                                                                 ;                   ;         ;
-; SW[16]                                                                                 ;                   ;         ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[15]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[14]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[13]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[0]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[12]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[11]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[10]                ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[9]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[8]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[7]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[6]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[5]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[3]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[2]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[1]                 ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[4]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[5]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[6]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[7]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[0]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[1]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[2]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|PC_TOP[3]                                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[20]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[21]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[22]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[23]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[8]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[9]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[10]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[11]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[4]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[5]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[6]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[7]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[0]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[1]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[2]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[3]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[4]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[20]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[37]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[5]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[21]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[6]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[22]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[7]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[23]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[4]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[5]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[6]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[7]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[0]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[1]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[2]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[3]                                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[44]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[28]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[29]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[66]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[45]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[46]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[30]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[47]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[31]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[32]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[33]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[34]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[35]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[0]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[1]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[2]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[3]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[39]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[24]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[37]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[0] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[12]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[11]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[10]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[9]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[8]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[7]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[6]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[5]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[1] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[0]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[2] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[3] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[4] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[5] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[6] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[7] ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[0]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[4]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[65]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[1]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[5]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[2]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[6]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[7]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[63]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~0                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[38]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][7]~1                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][3]~2                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][4]~3                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][4]~4                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][3]~5                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][5]~6                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][0]~7                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2]~8                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][0]~9                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][6]~10                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][7]~11                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][4]~12                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][7]~13                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][0]~14                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][7]~15                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3]~16                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][6]~17                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]~18                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]~19                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0]~20                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][3]~21                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]~22                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]~23                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~24                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][6]~25                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]~26                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][6]~27                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][0]~28                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3]~29                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4]~30                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7]~31                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][7]~32                     ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[48]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[61]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~33                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~34                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][1]~35                      ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~36                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~37                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[36]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[8]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[24]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[9]                                           ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[25]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[10]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[26]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[11]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[27]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[1]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[2]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[3]                                             ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[62]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[36]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[25]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[26]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[27]                                          ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~38                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[49]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~39                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~40                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[50]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~41                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[51]                                            ; 0                 ; 6       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~42                            ; 0                 ; 6       ;
-;      - LEDG[0]~output                                                                  ; 0                 ; 6       ;
-; KEY[3]                                                                                 ;                   ;         ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[15]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[14]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[13]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[0]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[12]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[11]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[10]                ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[9]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[8]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[7]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[6]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[5]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[3]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[2]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|MEMORY_INST:MEM_INST|INSTRUCTION[1]                 ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[4]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[5]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[6]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[7]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[0]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[1]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[2]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|PC_TOP[3]                                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[20]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[21]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[22]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[23]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[8]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[9]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[10]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[11]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[4]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[5]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[6]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[7]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[0]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[1]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[2]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[3]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[4]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[20]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[37]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[5]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[21]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[6]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[22]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[7]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[23]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[4]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[5]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[6]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[7]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[0]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[1]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[2]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[3]                                      ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[44]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[28]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[29]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[66]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[45]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[46]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[30]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[47]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[31]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[32]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[33]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[34]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[35]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[0]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[1]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[2]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[3]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[39]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][0]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][0]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[24]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[37]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][1]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][1]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][2]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][2]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][3]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][3]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[0] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[12]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[11]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[10]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[9]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[8]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[7]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[6]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[5]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[1] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[0]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[2] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[3] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[4] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[5] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[6] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg[7] ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[0]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[4]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[65]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[1]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[5]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[2]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[6]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[7]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[63]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[38]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[48]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[61]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[36]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[8]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[24]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[9]                                           ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[25]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[10]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[26]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[11]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[27]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[1]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[2]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[3]                                             ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[62]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[36]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][4]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][4]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[25]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][5]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][5]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[26]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][6]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][6]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[27]                                          ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][7]                         ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][7]                        ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[49]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[50]                                            ; 0                 ; 0       ;
-;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[51]                                            ; 0                 ; 0       ;
-;      - LEDG[7]~output                                                                  ; 1                 ; 6       ;
-+----------------------------------------------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                         ;
++------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                      ; Pad To Core Index ; Setting ;
++------------------------------------------------------------------------------------------+-------------------+---------+
+; SW[0]                                                                                    ;                   ;         ;
+; SW[1]                                                                                    ;                   ;         ;
+; SW[2]                                                                                    ;                   ;         ;
+; SW[3]                                                                                    ;                   ;         ;
+; SW[4]                                                                                    ;                   ;         ;
+; SW[5]                                                                                    ;                   ;         ;
+; SW[6]                                                                                    ;                   ;         ;
+; SW[7]                                                                                    ;                   ;         ;
+; SW[8]                                                                                    ;                   ;         ;
+; SW[9]                                                                                    ;                   ;         ;
+; SW[10]                                                                                   ;                   ;         ;
+; SW[11]                                                                                   ;                   ;         ;
+; SW[12]                                                                                   ;                   ;         ;
+; SW[13]                                                                                   ;                   ;         ;
+; SW[14]                                                                                   ;                   ;         ;
+; SW[15]                                                                                   ;                   ;         ;
+; KEY[0]                                                                                   ;                   ;         ;
+; KEY[1]                                                                                   ;                   ;         ;
+; KEY[2]                                                                                   ;                   ;         ;
+; SW[16]                                                                                   ;                   ;         ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][4]                          ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[0]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[3]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[8]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[6]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[4]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[5]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[6]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[7]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[0]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[1]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[2]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|PC_TOP[3]                                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[0]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[2]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[1]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[44]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[45]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[46]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[47]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[28]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[29]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[30]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[31]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[4]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[5]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[6]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[7]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[1]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[2]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[4]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[5]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[6]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[7]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[0]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[1]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[2]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[3]                                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[10]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[9]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[12]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[11]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[0] ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[1] ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[2] ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[3] ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[5]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[7]                                               ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[4]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[20]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[37]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[36]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[5]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[21]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[6]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[22]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[7]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[23]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[20]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[39]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[22]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[21]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[23]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[24]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[37]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[36]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[63]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~16                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[38]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][2]~17                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[66]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][1]~18                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][2]~19                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][2]~20                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][0]~21                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][2]~22                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][1]~23                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2]~24                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][2]~25                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][3]~26                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][0]~27                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][0]~28                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][2]~29                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][2]~30                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][1]~31                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3]~32                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~33                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]~34                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]~35                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][1]~36                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][2]~37                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][3]~38                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]~39                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~41                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]~42                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[48]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[32]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[61]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~43                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~44                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~46                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][4]~47                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~48                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~49                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~51                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~52                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~54                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~55                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[62]                                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[4] ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[8]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[24]                                            ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[8]                                             ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~56                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM~59                              ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1]~60                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]~61                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][3]~62                        ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3]~63                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][1]~64                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3]~65                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3]~66                       ; 0                 ; 6       ;
+;      - CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][2]~67                       ; 0                 ; 6       ;
+;      - LEDG[0]~output                                                                    ; 0                 ; 6       ;
+; CLOCK_50                                                                                 ;                   ;         ;
+; KEY[3]                                                                                   ;                   ;         ;
+;      - key_sync_0                                                                        ; 0                 ; 6       ;
++------------------------------------------------------------------------------------------+-------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2423,43 +1992,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                        ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10~0        ; LCCOMB_X108_Y31_N26 ; 2       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[36]                      ; FF_X114_Y33_N5      ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][6]~27  ; LCCOMB_X110_Y31_N8  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][6]~17 ; LCCOMB_X114_Y32_N18 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][0]~20 ; LCCOMB_X111_Y32_N18 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][7]~31 ; LCCOMB_X113_Y34_N20 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][4]~30 ; LCCOMB_X114_Y34_N24 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][3]~29 ; LCCOMB_X114_Y35_N0  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][7]~32 ; LCCOMB_X111_Y33_N24 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][7]~11 ; LCCOMB_X111_Y33_N20 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][0]~7  ; LCCOMB_X111_Y35_N14 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][6]~10 ; LCCOMB_X113_Y33_N22 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][5]~6  ; LCCOMB_X111_Y33_N0  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]~26  ; LCCOMB_X110_Y31_N22 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][0]~9  ; LCCOMB_X111_Y33_N30 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][3]~5  ; LCCOMB_X111_Y35_N12 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][4]~12 ; LCCOMB_X114_Y35_N26 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2]~8  ; LCCOMB_X111_Y35_N8  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][4]~3  ; LCCOMB_X108_Y35_N8  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][7]~15 ; LCCOMB_X108_Y35_N22 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][3]~2  ; LCCOMB_X108_Y34_N18 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][0]~14 ; LCCOMB_X111_Y34_N4  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][7]~1  ; LCCOMB_X109_Y34_N26 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][7]~13 ; LCCOMB_X109_Y35_N12 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][6]~25  ; LCCOMB_X114_Y31_N4  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][4]~4  ; LCCOMB_X112_Y34_N10 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3]~16 ; LCCOMB_X111_Y34_N14 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][0]~28  ; LCCOMB_X114_Y31_N30 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][2]~23  ; LCCOMB_X113_Y31_N30 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][5]~22  ; LCCOMB_X109_Y35_N10 ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][3]~21  ; LCCOMB_X113_Y31_N8  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][1]~35  ; LCCOMB_X111_Y33_N22 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][0]~19  ; LCCOMB_X114_Y32_N28 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][0]~18  ; LCCOMB_X113_Y32_N6  ; 8       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; KEY[3]                                                      ; PIN_R24             ; 386     ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; SW[16]                                                      ; PIN_Y24             ; 173     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; CLOCK                                                       ; FF_X102_Y24_N27     ; 4       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; CLOCK                                                       ; FF_X102_Y24_N27     ; 238     ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50                                                    ; PIN_Y2              ; 4       ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|Mux10~0        ; LCCOMB_X99_Y8_N2    ; 2       ; Latch enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[36]                      ; FF_X107_Y10_N27     ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[0][4]~47  ; LCCOMB_X108_Y12_N10 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[10][1]~60 ; LCCOMB_X108_Y15_N22 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[11][3]~63 ; LCCOMB_X107_Y13_N22 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[12][3]~66 ; LCCOMB_X108_Y14_N14 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[13][3]~65 ; LCCOMB_X109_Y14_N12 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][1]~64 ; LCCOMB_X107_Y15_N10 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[15][2]~67 ; LCCOMB_X107_Y15_N24 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[16][0]~27 ; LCCOMB_X108_Y13_N22 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[17][1]~23 ; LCCOMB_X106_Y13_N28 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[18][3]~26 ; LCCOMB_X108_Y15_N16 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[19][2]~22 ; LCCOMB_X109_Y13_N26 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[1][3]~39  ; LCCOMB_X106_Y12_N28 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[20][2]~25 ; LCCOMB_X110_Y13_N6  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[21][0]~21 ; LCCOMB_X106_Y13_N22 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[22][0]~28 ; LCCOMB_X110_Y13_N0  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[23][2]~24 ; LCCOMB_X107_Y13_N6  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[24][2]~19 ; LCCOMB_X108_Y15_N14 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][1]~31 ; LCCOMB_X109_Y12_N10 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][1]~18 ; LCCOMB_X108_Y15_N0  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[27][2]~30 ; LCCOMB_X111_Y12_N2  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][2]~17 ; LCCOMB_X108_Y14_N2  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[29][2]~29 ; LCCOMB_X109_Y13_N8  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[2][3]~38  ; LCCOMB_X108_Y12_N18 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[30][2]~20 ; LCCOMB_X108_Y11_N20 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[31][3]~32 ; LCCOMB_X111_Y12_N4  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[3][1]~42  ; LCCOMB_X108_Y12_N4  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[4][1]~36  ; LCCOMB_X109_Y12_N8  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[5][4]~35  ; LCCOMB_X106_Y12_N10 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[6][4]~34  ; LCCOMB_X108_Y12_N12 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[7][2]~37  ; LCCOMB_X109_Y12_N26 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][3]~62  ; LCCOMB_X108_Y14_N16 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[9][3]~61  ; LCCOMB_X106_Y14_N10 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; CPU:MAIN_CPU|PC_TOP[4]                                      ; FF_X98_Y8_N27       ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; SW[16]                                                      ; PIN_Y24             ; 128     ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
 +-------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                       ;
++----------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name     ; Location        ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK    ; FF_X102_Y24_N27 ; 238     ; 36                                   ; Global Clock         ; GCLK6            ; --                        ;
+; CLOCK_50 ; PIN_Y2          ; 4       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
++----------+-----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -2467,164 +2049,156 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 925 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 66 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 623 / 209,544 ( < 1 % ) ;
-; Direct links          ; 98 / 342,891 ( < 1 % )  ;
-; Global clocks         ; 0 / 20 ( 0 % )          ;
-; Local interconnects   ; 194 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 57 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 528 / 289,782 ( < 1 % ) ;
+; Block interconnects   ; 642 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 31 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 382 / 209,544 ( < 1 % ) ;
+; Direct links          ; 135 / 342,891 ( < 1 % ) ;
+; Global clocks         ; 2 / 20 ( 10 % )         ;
+; Local interconnects   ; 149 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 42 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 359 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.76) ; Number of LABs  (Total = 46) ;
+; Number of Logic Elements  (Average = 10.32) ; Number of LABs  (Total = 40) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 2                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 2                            ;
-; 6                                           ; 3                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 3                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 3                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 0                            ;
+; 1                                           ; 4                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 4                            ;
+; 11                                          ; 3                            ;
+; 12                                          ; 4                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 3                            ;
 ; 15                                          ; 2                            ;
-; 16                                          ; 22                           ;
+; 16                                          ; 11                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.83) ; Number of LABs  (Total = 46) ;
+; LAB-wide Signals  (Average = 1.70) ; Number of LABs  (Total = 40) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 17                           ;
-; 1 Clock                            ; 42                           ;
-; 1 Clock enable                     ; 16                           ;
-; 2 Clock enables                    ; 9                            ;
+; 1 Async. clear                     ; 11                           ;
+; 1 Clock                            ; 36                           ;
+; 1 Clock enable                     ; 11                           ;
+; 1 Sync. clear                      ; 1                            ;
+; 2 Clock enables                    ; 8                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.13) ; Number of LABs  (Total = 46) ;
+; Number of Signals Sourced  (Average = 16.38) ; Number of LABs  (Total = 40) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
+; 2                                            ; 3                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
 ; 16                                           ; 2                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 2                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 1                            ;
+; 23                                           ; 4                            ;
+; 24                                           ; 4                            ;
+; 25                                           ; 3                            ;
 ; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 4                            ;
-; 29                                           ; 3                            ;
-; 30                                           ; 6                            ;
-; 31                                           ; 3                            ;
-; 32                                           ; 1                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.00) ; Number of LABs  (Total = 46) ;
+; Number of Signals Sourced Out  (Average = 7.80) ; Number of LABs  (Total = 40) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 1                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 0                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 3                            ;
 ; 8                                               ; 2                            ;
-; 9                                               ; 5                            ;
-; 10                                              ; 4                            ;
-; 11                                              ; 4                            ;
-; 12                                              ; 7                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 2                            ;
+; 9                                               ; 3                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 2                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 5                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 1                            ;
-; 16                                              ; 2                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 2                            ;
+; 16                                              ; 0                            ;
+; 17                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 16.52) ; Number of LABs  (Total = 46) ;
+; Number of Distinct Inputs  (Average = 14.20) ; Number of LABs  (Total = 40) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 5                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 4                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 4                            ;
+; 8                                            ; 3                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 3                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 2                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 4                            ;
-; 18                                           ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 3                            ;
+; 18                                           ; 3                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 2                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 3                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 2                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 0                            ;
-; 33                                           ; 1                            ;
-; 34                                           ; 0                            ;
-; 35                                           ; 0                            ;
-; 36                                           ; 1                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2689,7 +2263,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; Total Inapplicable ; 0         ; 86           ; 0         ; 86           ; 86           ; 0         ; 0         ; 86           ; 0         ; 0         ; 86           ; 22           ; 86           ; 86           ; 64           ; 86           ; 22           ; 64           ; 86           ; 86           ; 86           ; 22           ; 86           ; 86           ; 86           ; 86           ; 86           ; 0         ; 86           ; 86           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2774,6 +2347,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX0[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[16]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -2819,33 +2393,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------+----------------------+-------------------+
 ; Source Clock(s)                      ; Destination Clock(s) ; Delay Added in ns ;
 +--------------------------------------+----------------------+-------------------+
-; I/O                                  ; KEY[3]               ; 19.5              ;
-; KEY[3]                               ; KEY[3]               ; 10.9              ;
-; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13] ; KEY[3]               ; 5.7               ;
-; KEY[3]                               ; KEY[3],I/O           ; 1.7               ;
+; CLOCK                                ; CLOCK                ; 9.8               ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13] ; CLOCK                ; 2.3               ;
+; CLOCK                                ; CLOCK,I/O            ; 1.5               ;
 +--------------------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                      ;
-+-----------------------------------------------------+----------------------------------------------------------+-------------------+
-; Source Register                                     ; Destination Register                                     ; Delay Added in ns ;
-+-----------------------------------------------------+----------------------------------------------------------+-------------------+
-; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13]                ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                     ; 4.009             ;
-; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14]                ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                     ; 4.009             ;
-; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15]                ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                     ; 4.009             ;
-; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|REGDST ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[65]                     ; 2.860             ;
-; KEY[3]                                              ; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[23]                   ; 0.753             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[5]               ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[25][1] ; 0.435             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[6]               ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[26][2] ; 0.435             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[4]               ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][0] ; 0.434             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[7]               ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[28][3] ; 0.434             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[9]               ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[8][5]  ; 0.127             ;
-; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[23]              ; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[27]                   ; 0.096             ;
-+-----------------------------------------------------+----------------------------------------------------------+-------------------+
-Note: This table only shows the top 11 path(s) that have the largest delay added for hold.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                             ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                   ; Destination Register                                                              ; Delay Added in ns ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+-------------------+
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[13]                                              ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[63]                                              ; 4.142             ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14]                                              ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                                              ; 3.069             ;
+; CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15]                                              ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[60]                                              ; 3.069             ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|CONTROL_UNITY:CU|MEM2REG                              ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[61]                                              ; 2.330             ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[7]                                             ; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[3] ; 0.131             ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[4] ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[48]                                              ; 0.105             ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[0] ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[44]                                              ; 0.105             ;
+; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[2] ; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[46]                                              ; 0.105             ;
+; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[23]                                            ; CPU:MAIN_CPU|ID_STAGE:ID_ST|REGBANK:REGBANK_INST|REG16:\GEN_REGS:0:REG_i|reg_q[3] ; 0.086             ;
+; CPU:MAIN_CPU|PC_TOP[5]                                                            ; CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[5]                                        ; 0.074             ;
+; CPU:MAIN_CPU|IDEX:ID_EX|DATA_OUT[66]                                              ; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[24]                                            ; 0.073             ;
+; CPU:MAIN_CPU|PC_TOP[6]                                                            ; CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[6]                                        ; 0.072             ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[39]                                            ; CPU:MAIN_CPU|MEMWB:MEM_WB|DATA_OUT[22]                                            ; 0.072             ;
+; CPU:MAIN_CPU|EXMEM:EX_MEM|DATA_OUT[8]                                             ; CPU:MAIN_CPU|MEM_STAGE:MEM_ST|MEMORY_DATA:MEM|RAM[14][4]                          ; 0.071             ;
+; CPU:MAIN_CPU|PC_TOP[4]                                                            ; CPU:MAIN_CPU|IF_STAGE:IF_ST|NEXT_PC_INT[6]                                        ; 0.060             ;
++-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 15 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2881,6 +2458,14 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 8
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
+Info (176353): Automatically promoted node CLOCK  File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 25
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[15] File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 20
+        Info (176357): Destination node CPU:MAIN_CPU|IFID:IF_ID|DATA_OUT[14] File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/PIPELINE_REGISTERS/IFID.VHD Line: 20
+        Info (176357): Destination node LEDG[7]~output File: C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/SRC/COMPONENTS/CPUTOP.VHD Line: 11
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -3206,31 +2791,31 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X104_Y24 to location X115_Y36
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.32 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/20098315/Downloads/16Bit-Pipeline-CPU-with-Hazards-VHDL/other/output_files/Projeto3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 328 warnings
-    Info: Peak virtual memory: 6357 megabytes
-    Info: Processing ended: Fri Nov 28 13:18:52 2025
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 6442 megabytes
+    Info: Processing ended: Mon Dec 01 12:46:27 2025
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:23
 
 

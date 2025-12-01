@@ -22,25 +22,28 @@ END MEMORY_DATA;
 ARCHITECTURE LOGICA OF MEMORY_DATA IS
     CONSTANT TAM_MEM : INTEGER := 2 ** ADDR_SIZE;
     TYPE RAM_TYPE IS ARRAY (0 TO TAM_MEM - 1) OF DATA_T;
-    SIGNAL RAM : RAM_TYPE := (
-        0  => x"0005",  
-        1  => x"000A",  
-        2  => x"0016",  
-        3  => x"0046",  
-        4  => x"0050",  
-        5  => x"003E",  
-        6  => x"0030",  
-        7  => x"0001", 
-        8  => x"0020",  
-        9  => x"000F",  
-        10 => x"0002",  
-        11 => x"00FF",  
-        12 => x"00AA",  
-        13 => x"005C",  
-        14 => x"000C",  
-        15 => x"0000",  
+    CONSTANT RAM_INIT : RAM_TYPE := (
+        0  => x"0001",
+        1  => x"0002",
+        2  => x"0003",
+        3  => x"0004",
+        4  => x"0005",
+        5  => x"0006",
+        6  => x"0007",
+        7  => x"0008",
+        8  => x"0009",
+        9  => x"000A",
+        10 => x"000B",
+        11 => x"000C",
+        12 => x"000D",
+        13 => x"000E",
+        14 => x"000F",
+        15 => x"0010",
         OTHERS => (OTHERS => '0')
     );
+	 
+    SIGNAL RAM : RAM_TYPE := RAM_INIT;
+
     
     SIGNAL ADDR_INDEX: INTEGER RANGE 0 TO TAM_MEM-1;
 BEGIN
@@ -51,12 +54,10 @@ BEGIN
     PROCESS(CLOCK, RESET)
     BEGIN
         IF RISING_EDGE(CLOCK) THEN
-            IF RESET='1' THEN
-                FOR i IN 0 TO TAM_MEM-1 LOOP
-                    RAM(i) <= (OTHERS => '0');
-                END LOOP;
+            IF RESET = '1' THEN
+                RAM <= RAM_INIT;
             ELSE
-                IF MEM_WRITE='1' THEN
+                IF MEM_WRITE = '1' THEN
                     RAM(ADDR_INDEX) <= WRITE_DATA;
                 END IF;
             END IF;

@@ -22,13 +22,27 @@ END CPUTOP;
 
 ARCHITECTURE LOGICA OF CPUTOP is
     SIGNAL RESET      : STD_LOGIC;
-    SIGNAL CLOCK      : STD_LOGIC;       
+    SIGNAL CLOCK      : STD_LOGIC;
+	 SIGNAL key_sync_0, key_sync_1, key_prev : STD_LOGIC;
 begin
 
-    
+    process(CLOCK_50)
+	 begin
+		if rising_edge(CLOCK_50) then
+			key_sync_0 <= KEY(3);
+			key_sync_1 <= key_sync_0;
+			if (key_prev = '1') and (key_sync_1 = '0') then
+				CLOCK <= '1';
+			ELSE
+				CLOCK <= '0';
+			END IF;
+			key_prev <= key_sync_1;
+		END IF;
+	END PROCESS;
+	 
     RESET <= SW(16);
 	 LEDG(0) <= RESET;
-	 CLOCK <= NOT KEY(3);
+	 
 
     
     MAIN_CPU : CPU PORT MAP(
